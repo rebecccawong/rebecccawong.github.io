@@ -1,0 +1,317 @@
+@font-face {
+    font-family: 'rockwell';
+    src: url(../fonts/Rockwell/Rockwell-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'roboto-black';
+    src: url(../fonts/Roboto/Roboto-Black.ttf);
+}
+
+@font-face {
+    font-family: 'roboto-bold';
+    src: url(../fonts/Roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'roboto-light';
+    src: url(../fonts/Roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: 'roboto-regular';
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+body{
+    /* margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0; */
+    margin: 0;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-family: 'roboto-regular', 'sans-serif';
+    /* overflow: hidden; */
+}
+
+h1{
+    margin-top: 1vw;
+    font-family: 'rockwell';
+    font-size: 50pt;
+    color: #d76983;
+}
+
+h2{
+    font-family: 'roboto-bold';
+    font-size: 40pt;
+    color: white;
+}
+
+h3{
+    font-family: 'roboto-regular';
+    font-size: 13pt;
+    color: #796066;
+}
+
+p{
+    text-align: left;
+}
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+    /* width: 10px; */
+    display: none;
+}
+
+/* ::-webkit-scrollbar-track {
+    background: none; 
+} */
+
+/* ::-webkit-scrollbar-thumb {
+    background: rgb(215, 105, 131); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: rgb(121, 96, 102); 
+} */
+
+
+/* HAMBURGER MENU */
+#menu-toggle{
+    font-weight: bold;
+    font-size: 2vw;
+    display: block;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menu-toggle a{
+    text-decoration: none;
+    /* color: rgb(224, 51, 51); */
+    color: white;
+    transition: color 0.3s ease;
+}
+
+#menu-toggle a:hover{
+    color: rgb(219, 138, 138);
+}
+
+#menu-toggle input{
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+}
+
+#menu-toggle span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    /* background: white; */
+    background: #d76983;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+}
+
+#menu-toggle span:first-child{
+    transform-origin: 0% 0%;
+}
+
+#menu-toggle span:nth-last-child(2){
+    transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+ #menu-toggle input:checked ~ span {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: white;
+ }
+ 
+ /*
+  * But let's hide the middle one.
+  */
+ #menu-toggle input:checked ~ span:nth-last-child(3) {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+ 
+ /*
+  * Oh yeah and the last one should go the other direction
+  */
+ #menu-toggle input:checked ~ span:nth-last-child(2) {
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+
+ #menu{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #796066;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menu-toggle input:checked ~ ul{
+  transform: none;
+}
+
+.home{
+    margin-top: 5vh;
+}
+
+.home h1{
+    text-align: center;
+
+    /* OPTION 2 */
+    /* margin-left: 350px; */
+}
+
+.home h3{
+    margin-top: -50px;
+    text-align: center;
+
+    /* OPTION 2 */
+    /* margin-left: 350px;
+    margin-top: -50px; */
+}
+
+.projects{
+    margin-top: 20vw;
+}
+
+/* https://blog.logrocket.com/create-parallax-scrolling-css/#implement-parallax-effect-css */
+/* https://codepen.io/robatronbobby/pen/KKRrKNz?editors=1100 */
+
+.parallex-container{
+    min-height: 70vh;
+    max-height: 70vh;
+    
+    background-attachment: fixed;
+    background-image: url(../main-graphic-design.png);
+    background-position: center;
+    background-size: cover;
+
+    padding: 0;
+    margin: 0;
+
+    transition: background-size 0.3s ease;
+}
+
+/* .buffer{
+    width: 100%;
+    min-height: 50vh;
+    background-color: turquoise;
+} */
+
+.three-anim{
+    background-image: url(../main-3d-animation.png);
+    background-position: center;
+    background-size: auto;
+    
+}
+
+.two-anim{
+    background-image: url(../main-2d-animation.png);
+    background-position: center;
+}
+
+.para-a{
+    display: inline-block;
+    /* padding: 1em 3.5em; */
+    margin-top: 60vh;
+    padding-left: 1vw;
+
+    border-radius: 0.3em;
+    background-color: none;
+    color: white;
+    /* letter-spacing: 0.5px; */
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: font-size 0.3s ease;
+}
+
+.para-a:hover{
+    /* font-size: larger; */
+    font-family: 'roboto-black', 'sans-serif';
+}
+
+.end-card{
+    margin-top: 3vw;
+}
+
+.end-card-img{
+    width: 100%;
+    height: auto;
+}
+
+
+/* GRAPHIC DESIGN STYLES */
+
+.about-content{
+    margin-top: 5%;
+    
+}
+
+.about-flex{
+    display: flex;
+    margin-top: 0;
+    margin-left: 15%;
+    flex: 1fr 1fr;
+}
+
+.about-flex1{
+    margin-top: 0;
+    margin-right: 21%;
+}
+
+.about-flex2{
+    padding-right: 40%;
+}
