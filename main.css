@@ -234,7 +234,7 @@ background: rgb(121, 96, 102);
     max-height: 70vh;
     
     background-attachment: fixed;
-    background-image: url(../main-graphic-design.png);
+    background-image: url(main-graphic-design.png);
     background-position: center;
     background-size: cover;
 
@@ -251,14 +251,14 @@ background: rgb(121, 96, 102);
 } */
 
 .three-anim{
-    background-image: url(../main-3d-animation.png);
+    background-image: url(main-3d-animation.png);
     background-position: center;
     background-size: auto;
     
 }
 
 .two-anim{
-    background-image: url(../main-2d-animation.png);
+    background-image: url(main-2d-animation.png);
     background-position: center;
 }
 
