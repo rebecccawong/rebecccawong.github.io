@@ -65,14 +65,35 @@ h3{
 }
 
 p{
+    margin: 0;
     text-align: left;
     color: #6e6e6e;
 }
 
 /* SCROLLBAR */
 ::-webkit-scrollbar {
-    display: none;
+    width: 10px;
 }
+  
+/* Entire track */
+::-webkit-scrollbar-track {
+background: none; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #d76983; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #ba556d; 
+}
+
+/* Handle on active */
+::-webkit-scrollbar-thumb:active {
+    background: #9c4257; 
+    }
 
 ::selection{
     background-color: #ddbbc3;
@@ -599,13 +620,11 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
 .module-pic{
     width: 40%;
     margin-right: 5%;
+    margin-bottom: 5%;
 }
 
-#module4{
-    margin-top: 6%;
-}
 #module5{
-    margin-top: 6%;
+    margin-bottom: 0;
 }
 
 .gd-projects{
@@ -616,4 +635,117 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
 .micro-modules{
     display: flex;
     margin-left: 17%;
+}
+
+/* MICROSITE */
+
+.microsite-top-img{
+    background-image: url(../img/main-microsite.png);
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    padding-top: 25vw;
+    text-align: left;
+    color: #fff6f6;
+    font-family: 'rubik-med', sans-serif;
+}
+
+.page-content{
+    margin-top: 3%;
+}
+
+.mini-headers{
+    font-family: 'rubik-med', sans-serif;
+    font-size: 20pt;
+    margin-left: 8%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    color: #796066;
+}
+
+.overview-text{
+    margin-left: 15vw;
+}
+
+.overview-text-flex{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.overview-flex1, .overview-flex2{
+    margin-bottom: 1.5vw;
+}
+
+.overview-flex1{
+    font-family: 'rubik-bold', sans-serif;
+    color: #353535;
+}
+
+.overview-flex2{
+    /* margin-left: 0.5vw; */
+    font-family: 'rubik-reg', sans-serif;
+    margin-left: -50%;
+    margin-right: 15vw;
+    color: #6e6e6e;
+}
+
+.micro-process, .micro-mockups, .micro-final-mockups, .micro-dev, .micro-reflection{
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.micro-process-flex{
+    display: flex;
+    margin-top: 7%;
+}
+
+.wireframe1{
+    width: 80%;
+}
+
+.wireframe2{
+    margin-left: -5%;
+}
+
+.micro-mockups-flex{
+    display: flex;
+    margin-top: 3%;
+}
+
+.mockups{
+    width: 85%;
+}
+
+.orch{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    width: 71%;
+}
+
+.now-playing{
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+#micro-top-page{
+    font-family: 'rubik-med';
+    font-size: 10pt;
+    text-decoration: none;
+    color:#d76983;
+}
+
+.threed-top-img{
+    background-image: url(../img/main-3d.png);
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    padding-top: 25vw;
+    text-align: left;
+    color: #fff6f6;
+    font-family: 'rubik-med', sans-serif;
+}
+
+.film-vid{
+    align-items: center;
+    text-align: center;
 }
