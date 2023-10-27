@@ -727,7 +727,7 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
     margin-bottom: 3%;
 }
 
-#micro-top-page{
+#micro-top-page, #monster-top-page{
     font-family: 'rubik-med';
     font-size: 10pt;
     text-decoration: none;
@@ -746,6 +746,53 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
 }
 
 .film-vid{
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+
     align-items: center;
     text-align: center;
+}
+
+.monster-desc{
+    margin-top: 1vw;
+    color: #6e6e6e;
+    margin-right: 25vw;
+}
+
+.monster-process, .monster-reflection{
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.monster-flex{
+    display: flex;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+}
+
+#monster-chardes{
+    width: 95%;
+}
+
+#monster-chardes2{
+    width: 90%;
+}
+
+.monster-flex1{
+    margin-right: 2%;
+}
+
+#mhouse, #mschool, #mgrad, #mwork{
+    width: 95%;
+}
+
+.monster-pic-text{
+    color: #6e6e6e;
+    text-align: center;
+    font-size: small;
+}
+
+.monster-storyboard{
+    width: 98%;
 }
