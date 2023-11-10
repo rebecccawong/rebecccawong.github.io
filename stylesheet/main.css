@@ -226,7 +226,7 @@ background: #ba556d;
 }
 
 .home{
-    margin-top: 5vh;
+    margin-top: 7vh;
 }
 
 .home h1{
@@ -239,10 +239,25 @@ background: #ba556d;
 .home h3{
     margin-top: -50px;
     text-align: center;
+    font-weight: 350;
 
     /* OPTION 2 */
     /* margin-left: 350px;
     margin-top: -50px; */
+}
+
+.index-title{
+    margin-top: 5%;
+    margin-left: 8%;
+    margin-right: 35%;
+    margin-bottom: 3%;
+    color: #9c4257;
+    font-family: 'rubik-bold', sans-serif;
+    font-size: 30pt;
+}
+
+.index-body{
+    margin-left: 8%;
 }
 
 .projects{
@@ -253,8 +268,8 @@ background: #ba556d;
 /* https://codepen.io/robatronbobby/pen/KKRrKNz?editors=1100 */
 
 .parallex-container{
-    min-height: 70vh;
-    max-height: 70vh;
+    min-height: 75vh;
+    max-height: 75vh;
     
     background-attachment: fixed;
     background-image: url(../img/main-graphic-design.png);
@@ -262,7 +277,8 @@ background: #ba556d;
     background-size: cover;
 
     padding: 0;
-    margin: 0;
+    /* margin: 0; */
+    margin-bottom: -3vw;
 
     transition: background-size 0.3s ease;
 }
@@ -276,7 +292,6 @@ background: #ba556d;
 .three-anim{
     background-image: url(../img/main-3d-animation.png);
     background-position: center;
-    background-size: auto;
     
 }
 
@@ -285,10 +300,20 @@ background: #ba556d;
     background-position: center;
 }
 
+.doug{
+    background-image: url(../img/main-doug.png);
+    background-position: center;
+}
+
+.fly{
+    background-image: url(../img/main-flytographer.png);
+    background-position: center;
+}
+
 .para-a{
     display: inline-block;
     /* padding: 1em 3.5em; */
-    margin-top: 60vh;
+    margin-top: 65vh;
     padding-left: 1vw;
 
     border-radius: 0.3em;
@@ -306,7 +331,8 @@ background: #ba556d;
 } */
 
 .end-card{
-    margin-top: 3vw;
+    margin-top: 3.5vw;
+    margin-bottom: -3vw;
 }
 
 .end-card-img{
@@ -317,16 +343,18 @@ background: #ba556d;
 
 /* ABOUT STYLES */
 
-.about-content{
+content{
     margin-top: 5%;
     margin-left: 10%;
 }
 
 .about-flex{
     display: flex;
-    margin-top: 0;
+    /* margin-top: 0; */
+    margin-top: 3%;
     margin-left: 15%;
     flex: 1fr 1fr;
+    justify-content: center;
 }
 
 .about-flex1{
@@ -335,15 +363,27 @@ background: #ba556d;
 }
 
 .about-flex2{
-    padding-right: 40%;
+    /* padding-right: 40%; */
+    margin-right: 30%;
 }
 
 .about-flex2 p{
     margin-top: 1vh;
 }
 
+.about-body{
+    margin-right: 5%;
+}
+
 .about-titles{
     font-family: 'rubik-bold', sans-serif;
+}
+
+.about-title{
+    color: #ba556d;
+    font-family: 'rubik-bold';
+    font-size: 30pt;
+    margin-bottom: 5%;
 }
 
 .about-titles-socials{
@@ -795,4 +835,41 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
 
 .monster-storyboard{
     width: 98%;
+}
+
+#re-top-img{
+    background-image: url(../img/main-flytographer.png);
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    padding-top: 25vw;
+    text-align: left;
+    color: #fff6f6;
+    font-family: 'rubik-med', sans-serif;
+}
+
+/* DOUGLAS ROYALS */
+
+.doug-top-img{
+    background-image: url(../img/main-doug.png);
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    padding-top: 25vw;
+    text-align: left;
+    color: #fff6f6;
+    font-family: 'rubik-med', sans-serif;
+}
+
+/* REBRAND FLYTOGRAPHER */
+
+.rebrand-top-img{
+    background-image: url(../img/main-flytographer.png);
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    padding-top: 25vw;
+    text-align: left;
+    color: #fff6f6;
+    font-family: 'rubik-med', sans-serif;
 }
