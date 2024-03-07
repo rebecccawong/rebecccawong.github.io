@@ -534,8 +534,12 @@ content{
 
 /* MICROSITE */
 
+.micro-tabs{
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
 .microsite-top-img{
-    /* background-image: url(../img/main-microsite.png); */
     background-image: url(../img/main-graphic-design.png);
 
     background-size: cover;
@@ -579,37 +583,36 @@ content{
 }
 
 .overview-flex2{
-    /* margin-left: 0.5vw; */
     font-family: 'rubik-reg', sans-serif;
     margin-left: -50%;
     margin-right: 15vw;
     color: #6e6e6e;
 }
 
-.micro-process, .micro-mockups, .micro-final-mockups, .micro-dev, .micro-reflection{
+/* .micro-process, .micro-mockups, .micro-final-mockups, .micro-dev, .micro-reflection{
     margin-left: 15vw;
     margin-right: 15vw;
-}
+} */
 
-.micro-process-flex{
+/* .micro-process-flex{
     display: flex;
     margin-top: 7%;
-}
+} */
 
-.wireframe1{
+/* .wireframe1{
     width: 80%;
 }
 
 .wireframe2{
     margin-left: -5%;
-}
+} */
 
-.micro-mockups-flex{
+/* .micro-mockups-flex{
     display: flex;
     margin-top: 3%;
-}
+} */
 
-.mockups{
+/* .mockups{
     width: 85%;
 }
 
@@ -622,7 +625,7 @@ content{
 .now-playing{
     margin-top: 3%;
     margin-bottom: 3%;
-}
+} */
 
 #micro-top-page, #monster-top-page{
     font-family: 'rubik-med';
@@ -705,20 +708,6 @@ content{
     font-family: 'rubik-med', sans-serif;
 }
 
-.micro-link-a{
-    text-decoration: none;
-}
-
-.micro-link{
-    color: #d76983;
-    transition: color 0.3s ease;
-}
-
-.micro-link:hover, .micro-link:focus{
-    color: #8a8aba;
-    transition: color 0.3s ease;
-}
-
 /* DOUGLAS ROYALS */
 
 .doug-top-img{
@@ -743,20 +732,18 @@ content{
 
 .tab{
     background: transparent;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr; */
     grid-template-rows: 1fr 1fr;
 }
 
 .tabs{
     margin-bottom: 5%;
     display: flex;
-    /* flex-wrap: wrap; */
     background: transparent;
     height: 20%;
     width: 80%;
     color: #d76983;
-    /* justify-content: center; */
 }
 
 .label-douglas-headings{
@@ -846,9 +833,17 @@ content{
 
 /* ROYALS RUMBLE */
 
-.rr-logos-flex{
+/* .rr-logos-flex{
     display: flex;
     justify-content: center;
+} */
+
+#intramural-poster{
+    width: 110%;
+}
+
+#intramural-post{
+    width: 80%;
 }
 
 #rr-logo-img{
@@ -862,11 +857,6 @@ content{
     height: auto;
 }
 
-.rr-posters-flex{
-    display: flex;
-    justify-content: center;
-}
-
 #rr-phsyical-poster{
     width: 40%;
     height: 40%;
@@ -876,6 +866,58 @@ content{
 #rr-ig-poster{
     width: 40%;
     height: 40%;
+}
+
+/* PACWEST VOLLEYBALL CHAMPIONSHIPS */
+/* .vball-championships-img{ */
+.left-progress-img{
+    width: 90%;
+}
+
+/* .vball-champ-flex{ */
+.image-text-flex{
+    display: flex;
+}
+
+/* .vball-champ-flex1{ */
+.image-text-flex1{
+    width: 40rem;
+    margin-right: 3rem;
+}
+
+/* .vball-champ-flex2{ */
+.image-text-flex2{
+    width: 40rem;
+}
+
+/* .vball-champ-flex-img{ */
+.left-img-flex{
+    display: flex;
+    flex-direction: row;
+}
+
+.vball-new-line{
+    margin-top: 3rem;
+}
+
+/* .vball-champ-caption{ */
+.left-image-caption{
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.vball-champ-pg-flex{
+    text-align: left;
+}
+
+/* RECREATION */
+.tab-pics-rec{
+    width: 30%;
+    margin-bottom: 3rem;
+}
+
+#bookmark{
+    width: 35%;
 }
 
 
