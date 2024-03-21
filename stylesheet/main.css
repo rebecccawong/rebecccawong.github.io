@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: 'nohemi-light';
+    src: url(../fonts/Nohemi/Nohemi-Light.ttf);
+}
+
+@font-face {
     font-family: 'rubik-med';
     src: url(../fonts/Rubik/Rubik-Medium.ttf);
 }
@@ -47,6 +52,12 @@ h2{
 h3{
     font-family: 'rubik-med';
     font-size: 1.5em;
+    color: #796066;
+}
+
+h4{
+    font-family: 'rubik-med';
+    font-size: 1em;
     color: #796066;
 }
 
@@ -220,6 +231,7 @@ background: #ba556d;
     color: #8a8aba;
     font-family: 'rubik-bold', sans-serif;
     font-size: 5em;
+    line-height: 15vh;
 }
 
 .RW{
@@ -238,9 +250,13 @@ background: #ba556d;
     margin: 2.5rem;
 }
 
+.projects a{
+    text-decoration: none;
+}
+
 .parallex-container{
-    min-height: 27em;
-    max-height: 27em;
+    min-height: 70vh;
+    max-height: 70vh;
     
     background-attachment: fixed;
     background-image: url(../img/main-graphic-design.png);
@@ -254,31 +270,40 @@ background: #ba556d;
     padding-bottom: 3.5em;
     margin-bottom: 5em;
 
-    transition: background-size 1s ease;
-    transition: brightness 1s ease;
+    transition: background-size 0.5s ease;
 }
 
 .parallex-container:hover, .parallex-container:focus{
     background-size: 110%;
-    transition: background-size 1s ease;
-    transition: brightness 1s ease;
-    -webkit-filter: brightness(60%);
+    transition: background-size 0.5s ease;
+    z-index: -1;
+    text-decoration: none;
+    text-decoration-line: none;
+
+    .container-title{
+        display: block;
+
+        text-align: center;
+        font-family: 'nohemi', sans-serif;
+        font-size: 6vw;
+        color: #e7dede;
+        /* padding-top: 33vh;
+        padding-bottom: 33vh; */
+        padding: 3rem;
+        background-color: rgba(50, 50, 50, 50%);
+        z-index: 3;
+
+        transition: background-color 0.5s ease;
+    }
 }
 
 .container-title{
     display: none;
 }
 
-.parallex-container:hover + .container-title{
-    display: block;
-    color: #d76983;
-    size: 5em;
-}
-
 .three-anim{
     background-image: url(../img/main-3d-animation.png);
-    background-position: center;
-    
+    background-position: center;    
 }
 
 .two-anim{
@@ -293,6 +318,11 @@ background: #ba556d;
 
 .fly{
     background-image: url(../img/main-flytographer.png);
+    background-position: center;
+}
+
+.vidpoem{
+    background-image: url(../img/main-video-poem.png);
     background-position: center;
 }
 
@@ -323,8 +353,50 @@ background: #ba556d;
     width: 100%;
 }
 
-@media (min-width: 50em){
+/* MEDIA QUERIES INDEX  */
+@media (max-width: 1000px){
+    .parallex-container:hover, .parallex-container:focus{
+        background-size: cover;
+    }
 
+    .index-title{
+        margin-top: 15%;
+        margin-left: 3em;
+        width: 60vw;
+        color: #8a8aba;
+        font-family: 'rubik-bold', sans-serif;
+        font-size: 5vw;
+        line-height: 9vh;
+    }
+    
+    .RW{
+        width: 45vw;
+        position: absolute;
+        right: 3em;
+        top: 2em;
+    }
+}
+
+@media (max-width: 600px){
+    .RW{
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding-bottom: 5%;
+        right: -25vw;
+        /* background-color: #84ae87; */
+    }
+
+    .index-title{
+        margin-left: 17%;
+        text-align: center;
+        padding: 0;
+        line-height: 7vh;
+    }
+
+    .projects{
+        margin: 0;
+    }
 }
 
 /* END INDEX STYLES */
@@ -431,6 +503,58 @@ content{
 #instagram-icon:hover, #instagram-icon:focus, #tiktok-icon:hover, #tiktok-icon:focus, #linkedin-icon:hover, #linkedin-icon:focus{
     filter: grayscale(70%);
 }
+
+/* MEDIA QUERIES ABOUT */
+@media (max-width: 900px){
+    .about-flex1{
+        margin-right: 1vw;
+        width: 50%;
+    }
+
+    .about-flex2{
+        margin-right: 0;
+    }
+
+    #menu-toggle{
+        background-color: rgba(255, 246, 246, 40%);
+        padding: 5%;
+        margin-left: -5vw;
+    }
+}
+
+@media (max-width: 600px){
+    .about-flex{
+        display: inline;
+        margin-left: 2rem;
+    }
+
+    .about-body{
+        /* margin-right: 5%; */
+        line-height: 1.6em;
+        /* margin-top: -2%; */
+        width: 90%;
+    }
+
+    .about-flex1, .about-flex2{
+        margin-top: 20%;
+        margin-left: 2rem;
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 400px){
+    .about-title{
+        font-size: 10vw;
+    }
+
+    .about-flex1{
+        margin-top: 30%;
+    }
+}
+
+
+
 /* END ABOUT STYLES */
 
 
@@ -451,8 +575,19 @@ content{
     font-size: 3rem;
     color: #8a8aba;
     background: #e7dede;
-    padding: 0.2em;
+    padding-top: 0.2em;
     padding-left: 2em;
+    padding-bottom: 0.2em;
+    margin: 0;
+}
+
+.top-subtitle{
+    font-family: 'nohemi-light';
+    color: #796066;
+    font-size: 1.1rem;
+    font-style: normal;
+    margin-top: -5vh;
+    margin-left: 1.5vw;
 }
 
 .tab{
@@ -589,50 +724,14 @@ content{
     color: #6e6e6e;
 }
 
-/* .micro-process, .micro-mockups, .micro-final-mockups, .micro-dev, .micro-reflection{
-    margin-left: 15vw;
-    margin-right: 15vw;
-} */
-
-/* .micro-process-flex{
-    display: flex;
-    margin-top: 7%;
-} */
-
-/* .wireframe1{
-    width: 80%;
-}
-
-.wireframe2{
-    margin-left: -5%;
-} */
-
-/* .micro-mockups-flex{
-    display: flex;
-    margin-top: 3%;
-} */
-
-/* .mockups{
-    width: 85%;
-}
-
-.orch{
-    margin-top: 3%;
-    margin-bottom: 3%;
-    width: 71%;
-}
-
-.now-playing{
-    margin-top: 3%;
-    margin-bottom: 3%;
-} */
-
 #micro-top-page, #monster-top-page{
     font-family: 'rubik-med';
     font-size: 10pt;
     text-decoration: none;
     color:#d76983;
 }
+
+/* 3D ANIMATION */
 
 .threed-top-img{
     background-image: url(../img/main-3d.png);
@@ -707,6 +806,8 @@ content{
     color: #fff6f6;
     font-family: 'rubik-med', sans-serif;
 }
+
+/* END OF 3D ANIMATION */
 
 /* DOUGLAS ROYALS */
 
@@ -833,11 +934,6 @@ content{
 
 /* ROYALS RUMBLE */
 
-/* .rr-logos-flex{
-    display: flex;
-    justify-content: center;
-} */
-
 #intramural-poster{
     width: 110%;
 }
@@ -869,28 +965,29 @@ content{
 }
 
 /* PACWEST VOLLEYBALL CHAMPIONSHIPS */
-/* .vball-championships-img{ */
-.left-progress-img{
+.left-flex-img{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.left-progress-img{    
     width: 90%;
 }
 
-/* .vball-champ-flex{ */
 .image-text-flex{
     display: flex;
 }
 
-/* .vball-champ-flex1{ */
 .image-text-flex1{
     width: 40rem;
     margin-right: 3rem;
+    text-align: center;
 }
 
-/* .vball-champ-flex2{ */
 .image-text-flex2{
     width: 40rem;
 }
 
-/* .vball-champ-flex-img{ */
 .left-img-flex{
     display: flex;
     flex-direction: row;
@@ -900,7 +997,6 @@ content{
     margin-top: 3rem;
 }
 
-/* .vball-champ-caption{ */
 .left-image-caption{
     font-size: 0.75rem;
     text-align: center;
@@ -920,6 +1016,42 @@ content{
     width: 35%;
 }
 
+/* MEDIA QUERIES DOUGLAS ROYALS */
+
+@media (max-width: 750px){
+    .image-text-flex1{
+        width: 100%;
+        margin-right: 2%;
+    }
+
+    .image-text-flex2{
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .left-img-flex{
+        display: inline;
+    }
+
+    .tabs .tab{
+        padding: 0;
+    }
+
+    .tabs{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (max-width: 600px){
+    .image-text-flex{
+        margin-top: 2vh;
+        display: inline;
+    }
+}
+
+/* END OF DOUGLAS ROYALS */
+
 
 /* REBRAND FLYTOGRAPHER */
 
@@ -933,3 +1065,43 @@ content{
     color: #fff6f6;
     font-family: 'rubik-med', sans-serif;
 }
+
+/* END OF REBRAND FLYTOGRAPHER */
+
+/* VIDEO POEM POETRY TAKE A ST. AND */
+
+.vidpoem-top-img{
+    background-image: url(../img/main-video-poem.png);
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    padding-top: 25vw;
+    text-align: left;
+    color: #fff6f6;
+    font-family: 'rubik-med', sans-serif;
+}
+
+.youtube-vidpoem{
+    width: 100%;
+    /* background-color: #9c4257; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.video-poem-video{
+    
+}
+
+/* END OF VIDEO POEM POETRY TAKE A ST. AND */
+
+/* FOOTER */
+
+.footer-text{
+    font-size: 0.8rem;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    text-align: center;
+}
+
+/* END OF FOOTER */
