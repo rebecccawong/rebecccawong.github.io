@@ -976,6 +976,8 @@ content{
 
 .image-text-flex{
     display: flex;
+    /* background-color: #a8a8a8; */
+    justify-content: center;
 }
 
 .image-text-flex1{
@@ -985,7 +987,16 @@ content{
 }
 
 .image-text-flex2{
-    width: 40rem;
+    width: 20rem;
+}
+
+.right-progress-text{
+    line-height: 4.5vh;
+}
+
+.reflection-text{
+    padding-left: 12vw;
+    padding-right: 12vw;
 }
 
 .left-img-flex{
