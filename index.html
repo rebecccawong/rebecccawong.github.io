@@ -9,7 +9,6 @@
     <link rel="icon" type="image/x-icon" href="img/logo.ico">
 
     <link rel="stylesheet" href="stylesheet/main.css">
-    <!-- <link rel="scripts" href="scripts/main.js"> -->
 </head>
 
 <body>
@@ -17,34 +16,45 @@
     <header>
     </header>
     <!-- https://codepen.io/erikterwan/pen/EVzeRP -->
-    <nav role="navigation">
+    <nav class="nav-bar">
         <div id="menu-toggle">
-            <input type="checkbox"/>
-
+            <input type="checkbox" />
             <span></span>
             <span></span>
             <span></span>
-
             <ul id="menu">
-                <a href="index.html"><li>Home</li></a>
-                <a href="douglas-royals.html"><li>Douglas Royals</li></a>
-                <a href="microsite.html"><li>Microsite</li></a>
-                <a href="rebranding.html"><li>Rebranding</li></a>
-                <a href="video-poem.html"><li>Video Poem</li></a>
-                <!-- <a href="3d-animation.html"><li>3D Animation</li></a> -->
-                <!-- <a href="2d-animation.html"><li>2d animation</li></a> -->
-                <a href="about.html"><li>About</li></a>
-            </ul>        
+                <!-- <li><a href="index.html">Home</a></li> -->
+                <li><a href="douglas-royals.html">Douglas Royals</a></li>
+                <li><a href="microsite.html">Microsite</a></li>
+                <li><a href="rebranding.html">Rebranding</a></li>
+                <li><a href="video-poem.html">Video Poem</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
         </div>
+
+        <div class="logo-box"><a href="index.html"><img class="RWlogo" src="img/RWlogo.png" alt="Logo of The letters 'RW"></a></div>
     </nav>
 
-    <div class="home" id="home">
-        <img class="RW" src="img/RW.png">
-    </div>
+    <!-- <div class="home" id="home">
+        <img class="RW" src="img/RW.png" alt="Logo of The letters 'RW">
+        <img class="RWlogo" src="img/RWlogo.png" alt="Logo of The letters 'RW">
+
+    </div> -->
 
     <div>
-        <p class="index-title">Using graphic design to create user-friendly and expressive media.</p>
+        <p id="index-rest">Using <em id="index-title">graphic design</em> to create user-friendly and expressive media.</p>
     </div>
+
+    <script>
+        const indexText = document.querySelector('#index-title');
+        const randomIndexFonts = ['nohemi', 'nohemi-light', 'nohemi-med', 'nohemi-semi-bold', 'nohemi-extra-light', 'nohemi-black'];
+        const randomIndexColours = ['#d76983', '#796066', '#216F5F', '#8a8aba'];
+
+        indexText.addEventListener("click", function(){
+            indexText.style.fontFamily = randomIndexFonts[Math.floor(Math.random() * randomIndexFonts.length)];
+            indexText.style.color = randomIndexColours[Math.floor(Math.random() * randomIndexColours.length)];
+        });
+    </script>
 
     <div class="projects" id="projects">
         
@@ -91,7 +101,7 @@
     </div> <!--PROJECTS DIV-->
 
     <div class="end-card">
-        <img class="end-card-img" src="img/end-banner.png" alt="end card">
+        <img class="end-card-img" src="img/end-banner.png" alt="End card with logotype and email">
     </div>
     
 
@@ -99,5 +109,7 @@
 <footer>
     <p class="footer-text">Portfolio designed and developed by Rebecca Wong</p>
 </footer>
+
+<script src="script/script1.js"></script>
 </body>
 </html>
