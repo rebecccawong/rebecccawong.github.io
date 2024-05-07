@@ -89,10 +89,9 @@ h5{
 }
 
 p{
-    margin: 0;
     text-align: left;
     color: #6e6e6e;
-    line-height: 1.5;
+    /* line-height: 1.5; */
 }
 
 /* SCROLLBAR */
@@ -508,7 +507,7 @@ content{
 .about-body{
     margin-right: 5%;
     /* line-height: 1.3; */
-    line-height: 1.6em;
+    /* line-height: 1.6em; */
     margin-top: -2%;
 }
 
@@ -630,7 +629,7 @@ content{
 
     .about-body{
         /* margin-right: 5%; */
-        line-height: 1.6em;
+        /* line-height: 1.6em; */
         /* margin-top: -2%; */
         width: 90%;
     }
@@ -942,6 +941,14 @@ content{
 
 /* DOUGLAS ROYALS */
 
+.quick-flex{
+    display: flex;
+}
+
+.button-flex{
+    margin-right: 1vw;
+}
+
 .doug-top-img{
     background-image: url(../img/main-doug.png);
     background-size: cover;
@@ -1142,7 +1149,7 @@ content{
 }
 
 .right-progress-text{
-    line-height: 4.5vh;
+    /* line-height: 4.5vh; */
 }
 
 .reflection-text{
