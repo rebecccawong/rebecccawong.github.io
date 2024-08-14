@@ -23,10 +23,9 @@
             <span></span>
             <span></span>
             <ul id="menu">
-                <!-- <li><a href="index.html">Home</a></li> -->
                 <li><a href="douglas-royals.html">Douglas Royals</a></li>
                 <li><a href="microsite.html">Microsite</a></li>
-                <li><a href="rebranding.html">Rebranding</a></li>
+                <!-- <li><a href="rebranding.html">Rebranding</a></li> -->
                 <li><a href="video-poem.html">Video Poem</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
@@ -35,20 +34,21 @@
         <div class="logo-box"><a href="index.html"><img class="RWlogo" src="img/RWlogo.png" alt="Logo of The letters 'RW"></a></div>
     </nav>
 
-    <!-- <div class="home" id="home">
-        <img class="RW" src="img/RW.png" alt="Logo of The letters 'RW">
-        <img class="RWlogo" src="img/RWlogo.png" alt="Logo of The letters 'RW">
-
-    </div> -->
-
     <div>
-        <p id="index-rest">Using <em id="index-title">graphic design</em> to create user-friendly and expressive media.</p>
+        <p id="index-rest">Using <em id="index-title">graphic design</em><br> to create user-friendly<br>and expressive media.</p>
     </div>
 
     <script>
         const indexText = document.querySelector('#index-title');
         const randomIndexFonts = ['nohemi', 'nohemi-light', 'nohemi-med', 'nohemi-semi-bold', 'nohemi-extra-light', 'nohemi-black'];
-        const randomIndexColours = ['#d76983', '#796066', '#216F5F', '#8a8aba'];
+        const randomIndexColours = ['#d76983', '#796066', '#216F5F'];
+
+        indexText.addEventListener("mouseover", function(){
+            // replaced "click" with "mouseover"
+            // https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseover_event
+            indexText.style.fontFamily = randomIndexFonts[Math.floor(Math.random() * randomIndexFonts.length)];
+            indexText.style.color = randomIndexColours[Math.floor(Math.random() * randomIndexColours.length)];
+        });
 
         indexText.addEventListener("click", function(){
             indexText.style.fontFamily = randomIndexFonts[Math.floor(Math.random() * randomIndexFonts.length)];
@@ -60,54 +60,75 @@
         
         <a href="douglas-royals.html">
             <section class="parallex-container doug">
-                <div class="container-title">
+                <!-- <div class="container-title">
                     DOUGLAS ROYALS
-                </div>   
+                </div> -->
             </section>
+            <div class="index-subtext">
+                <p class="index-text one">
+                    Douglas College Athletics
+                </p>
+                <p class="index-text two">
+                    Graphic design
+                </p>
+            </div>
         </a>
 
         <a href="microsite.html">
-            <section class="parallex-container">
-                <div class="container-title">
+            <section class="parallex-container micro-landing">
+                <!-- <div class="container-title">
                     MICROSITE
-                </div>                
+                </div> -->
             </section>
+            <div class="index-subtext">
+                <p class="index-text one">
+                    Microsite
+                </p>
+                <p class="index-text two">
+                    Web design and development
+                </p>
+            </div>
         </a>
 
-        <a href="rebranding.html">
+        <!-- <a href="rebranding.html">
             <section class="parallex-container fly">
-                <div class="container-title">
-                    REBRANDING
-                </div>
             </section>
-        </a>
+            <div class="index-subtext">
+                <p class="index-text one">
+                    Rebranding
+                </p>
+                <p class="index-text two">
+                    Visual branding
+                </p>
+            </div>
+        </a> -->
 
         <a href="video-poem.html">
             <section class="parallex-container vidpoem">
-                <div class="container-title">
+                <!-- <div class="container-title">
                     VIDEO POEM
-                </div>
+                </div> -->
             </section>
+            <div class="index-subtext">
+                <p class="index-text one">
+                    Video Poem
+                </p>
+                <p class="index-text two">
+                    Filmmaking and animation
+                </p>
+            </div>
         </a>
-
-        <!-- <section class="parallex-container three-anim">
-            <h2>
-                <a href="3d-animation.html" class="para-a three-a">
-                    3D Animated Short Film
-                </a>
-            </h2>
-        </section> -->
 
     </div> <!--PROJECTS DIV-->
 
-    <div class="end-card">
+    <!-- <div class="end-card">
         <img class="end-card-img" src="img/end-banner.png" alt="End card with logotype and email">
-    </div>
+    </div> -->
     
 
 </main>
 <footer>
-    <p class="footer-text">Portfolio fully designed and coded by Rebecca Wong</p>
+    <p class="footer-text">Portfolio designed and coded by Rebecca Wong</p>
 </footer>
 
 <script src="script/script1.js"></script>
