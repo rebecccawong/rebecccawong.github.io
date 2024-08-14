@@ -29,6 +29,11 @@
 }
 
 @font-face {
+    font-family: 'nohemi-reg';
+    src: url(../fonts/Nohemi/Nohemi-Regular.ttf);
+}
+
+@font-face {
     font-family: 'rubik-med';
     src: url(../fonts/Rubik/Rubik-Medium.ttf);
 }
@@ -54,6 +59,10 @@ body{
     color: black;
     text-decoration: none;
     font-family: 'rubik-reg', 'sans-serif';
+}
+
+img, video{
+    border-radius: 15px;
 }
 
 h1{
@@ -91,7 +100,8 @@ h5{
 p{
     text-align: left;
     color: #6e6e6e;
-    /* line-height: 1.5; */
+    font-size: 17px;
+    line-height: 1.5;
 }
 
 /* SCROLLBAR */
@@ -244,6 +254,7 @@ background: #ba556d;
   margin: -1em 0 0 -0.5em;
   padding: 0.5em;
   padding-top: 1.25em;
+  border-radius: 0 0 15px 0;
   
   background: #8a8aba;
   list-style-type: none;
@@ -272,13 +283,16 @@ background: #ba556d;
 
 #index-rest{
     margin-top: 2em;
-    margin-left: 1em;
-    width: 10em;
+    margin-left: 1.5em;
+    /* width: 13em; */
+    /* width: 60%; */
     margin-bottom: 1em;
 
     font-family: 'nohemi';
-    font-size: 5em;
-    line-height: 15vh;
+    /* font-size: 5em; */
+    font-size: 400%;
+    /* line-height: 15vh; */
+    line-height: 110%;
 
     color: #8a8aba;
 }
@@ -320,7 +334,8 @@ background: #ba556d;
 /* https://codepen.io/robatronbobby/pen/KKRrKNz?editors=1100 */
 
 .projects{
-    margin: 2.5rem;
+    /* margin: 2.5rem; */
+    margin: 6rem;
 }
 
 .projects a{
@@ -328,51 +343,69 @@ background: #ba556d;
 }
 
 .parallex-container{
-    min-height: 70vh;
-    max-height: 70vh;
+    min-height: 72vh;
+    max-height: 72vh;
+    /* min-height: 60vh;
+    max-height: 60vh; */
     
     background-attachment: fixed;
-    background-image: url(../img/main-graphic-design.png);
     background-size: 100%;
-    -webkit-filter: brightness(100%);
-    filter: brightness(100%);
-    background-position: center;
-    background-size: cover;
+    /* background-size: 90%; */
+    /* -webkit-filter: brightness(100%);
+    filter: brightness(100%); */
 
     padding: 0;
-    padding-bottom: 3.5em;
     margin-bottom: 5em;
+
+    border-radius: 15px;
 
     transition: background-size 0.5s ease;
 }
 
 .parallex-container:hover, .parallex-container:focus{
-    background-size: 110%;
+    background-size: 115%;
     transition: background-size 0.5s ease;
+
     z-index: -1;
     text-decoration: none;
     text-decoration-line: none;
 
-    .container-title{
+    /* .container-title{
         display: block;
 
         text-align: center;
         font-family: 'nohemi', sans-serif;
         font-size: 6vw;
         color: #e7dede;
-        /* padding-top: 33vh;
-        padding-bottom: 33vh; */
         padding: 3rem;
         background-color: rgba(50, 50, 50, 50%);
         z-index: 3;
 
         transition: background-color 0.5s ease;
-    }
+    } */
 }
 
-.container-title{
-    display: none;
+.index-subtext{
+    font-size: 105%;
+    line-height: 140%;
 }
+
+.one{
+    color: #d76983;
+    font-family: "nohemi-reg";
+    margin-top: -4rem;
+    margin-bottom: 0;
+    font-size: 120%;
+}
+
+.two{
+    margin-top: 0;
+    margin-bottom: 4rem;
+}
+
+/* .container-title{
+    display: none;
+} */
 
 .three-anim{
     background-image: url(../img/main-3d-animation.png);
@@ -386,6 +419,11 @@ background: #ba556d;
 
 .doug{
     background-image: url(../img/main-doug.png);
+    background-position: center;
+}
+
+.micro-landing{
+    background-image: url(../img/main-graphic-design.png);
     background-position: center;
 }
 
@@ -500,10 +538,6 @@ content{
     margin-right: 30%;
 }
 
-.about-flex2 p{
-    margin-top: 1vh;
-}
-
 .about-body{
     margin-right: 5%;
     /* line-height: 1.3; */
@@ -535,13 +569,13 @@ content{
 
 /* https://www.30secondsofcode.org/css/s/hover-underline-animation/ */
 .about-items{
-    font-size: 1em;
     font-family: 'Rubik-Med';
-    margin-bottom: 1.5em;
     color: #d76983;
 
     display: inline-block;
     position: relative;
+    margin-bottom: 3%;
+    margin-top: 0;
 }
 
 .about-items::after{
@@ -575,7 +609,8 @@ content{
     outline-color: #d76983;
     outline-style: solid;
     padding: 1em;
-    border-radius: 2em;
+    /* border-radius: 2em; */
+    border-radius: 15px;
     border: none;
     transition: background 0.3s ease;
 }
@@ -597,6 +632,7 @@ content{
     margin-right: 1em;
     transition: filter 0.3s ease;
     filter: grayscale(0%);
+    border-radius: 0;
 }
 
 #instagram-icon:hover, #instagram-icon:focus, #tiktok-icon:hover, #tiktok-icon:focus, #linkedin-icon:hover, #linkedin-icon:focus{
@@ -766,6 +802,45 @@ content{
 
 /* MICROSITE */
 
+/* https://www.quackit.com/html/codes/html_scroll_box.cfm */
+.scroll-sides{
+    display: flex;
+    /* background-color: #353535; */
+    height: 500px;
+}
+
+.scroll-box-mobile{
+    margin-left: 8%;
+    margin-bottom: 10%;
+    width: 380px;
+    height: 500px;
+    overflow: auto;
+
+}
+
+.scroll-box-desktop{
+    margin-left: 8%;
+    margin-bottom: 10%;
+    width: 460px;
+    height: 500px;
+    overflow: auto;
+}
+
+.scroll-img-mobile{
+    width: 360px;
+    height: auto;
+}
+
+.scroll-img-desktop{
+    width: 440px;
+    height: auto;
+}
+
+.overview-micro-gif{
+    width: 60%;
+    margin-left: 20%;
+}
+
 .micro-tabs{
     margin-left: 5rem;
     margin-right: 5rem;
@@ -799,38 +874,46 @@ content{
 
 /* OVERVIEW INFO OVERVIEWS */
 
-.overview-full{
+.overview-sides{
     display: flex;
-    margin-left: 10%;
+}
+
+.overview-side-text{
+    /* display: flex; */
+    /* margin-left: 10%; */
+    margin-left: 8%;
     text-align: left;
 }
 
 .overview-headings{
     margin-bottom: 0.9vh;
+    opacity: 85%;
 }
 
 .overview-module{
-    margin-right: 4vw;
-}
-
-.overview-time{
-    width: 9vw;
-}
-
-.overview-software{
-    width: 11vw;
-}
-
-.overview-roles{
-    width: 11vw;
-}
-
-.overview-context{
-    width: 30vw;
+    /* margin-right: 2vw; */
+    /* margin-right: 50px; */
+    /* background-color: #ccb8bd; */
+    width: 400px;
 }
 
 .overview-text{
     margin-left: 10em;
+}
+
+.progress-img-div{
+    text-align: center;
+    /* background-color: #353535; */
+}
+
+.progress-img{
+    width: 35rem;
+}
+
+.reg-desc{
+    padding-left: 7vw;
+    padding-right: 7vw;
+    /* background-color: #8a8aba; */
 }
 
 .overview-text-flex{
