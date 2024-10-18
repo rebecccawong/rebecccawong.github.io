@@ -23,9 +23,10 @@
             <span></span>
             <span></span>
             <ul id="menu">
-                <li><a href="douglas-royals.html">Douglas Royals</a></li>
+                <li><a href="athletics-banquet.html">Douglas College<br>Athletics Banquet</a></li>
+                <li><a href="pacwest-volleyball-championship.html">Douglas College<br>PACWEST Volleyball<br>Championships</a></li>
+                <li><a href="ics-workbook.html">Fraser Health<br>ICS Workbook</a></li>
                 <li><a href="microsite.html">Microsite</a></li>
-                <!-- <li><a href="rebranding.html">Rebranding</a></li> -->
                 <li><a href="video-poem.html">Video Poem</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
@@ -34,9 +35,9 @@
         <div class="logo-box"><a href="index.html"><img class="RWlogo" src="img/RWlogo.png" alt="Logo of The letters 'RW"></a></div>
     </nav>
 
-    <div>
-        <p id="index-rest">Using <em id="index-title">graphic design</em><br> to create user-friendly<br>and expressive media.</p>
-    </div>
+    <!-- <div class="index-rest">
+        <img id="index-rest" src="img/RW.png">
+    </div> -->
 
     <script>
         const indexText = document.querySelector('#index-title');
@@ -44,7 +45,6 @@
         const randomIndexColours = ['#d76983', '#796066', '#216F5F'];
 
         indexText.addEventListener("mouseover", function(){
-            // replaced "click" with "mouseover"
             // https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseover_event
             indexText.style.fontFamily = randomIndexFonts[Math.floor(Math.random() * randomIndexFonts.length)];
             indexText.style.color = randomIndexColours[Math.floor(Math.random() * randomIndexColours.length)];
@@ -58,15 +58,38 @@
 
     <div class="projects" id="projects">
         
-        <a href="douglas-royals.html">
-            <section class="parallex-container doug">
-                <!-- <div class="container-title">
-                    DOUGLAS ROYALS
-                </div> -->
+        <a href="athletics-banquet.html">
+            <section class="parallex-container banquet">
             </section>
             <div class="index-subtext">
                 <p class="index-text one">
-                    Douglas College Athletics
+                    Douglas College Royals Athletics Banquet
+                </p>
+                <p class="index-text two">
+                    Art direction, graphic design, video editing
+                </p>
+            </div>
+        </a>
+
+        <a href="pacwest-volleyball-championship.html">
+            <section class="parallex-container pacwest">
+            </section>
+            <div class="index-subtext">
+                <p class="index-text one">
+                    Douglas College PACWEST Volleyball Championships
+                </p>
+                <p class="index-text two">
+                    Art direction, graphic design
+                </p>
+            </div>
+        </a>
+
+        <a href="ics-workbook.html">
+            <section class="parallex-container icsworkbook">
+            </section>
+            <div class="index-subtext">
+                <p class="index-text one">
+                    Fraser Health ICS Workbook
                 </p>
                 <p class="index-text two">
                     Graphic design
@@ -74,15 +97,25 @@
             </div>
         </a>
 
-        <a href="microsite.html">
-            <section class="parallex-container micro-landing">
-                <!-- <div class="container-title">
-                    MICROSITE
-                </div> -->
+        <!-- <a href="pacwest-volleyball-championship.html">
+            <section class="parallex-container pacwest">
             </section>
             <div class="index-subtext">
                 <p class="index-text one">
-                    Microsite
+                    Fraser Health Newsroom And Social Templates
+                </p>
+                <p class="index-text two">
+                    Graphic design, design research
+                </p>
+            </div>
+        </a> -->
+
+        <a href="microsite.html">
+            <section class="parallex-container micro-landing">
+            </section>
+            <div class="index-subtext">
+                <p class="index-text one">
+                    Ratatouille In Concert Microsite
                 </p>
                 <p class="index-text two">
                     Web design and development
@@ -90,28 +123,12 @@
             </div>
         </a>
 
-        <!-- <a href="rebranding.html">
-            <section class="parallex-container fly">
-            </section>
-            <div class="index-subtext">
-                <p class="index-text one">
-                    Rebranding
-                </p>
-                <p class="index-text two">
-                    Visual branding
-                </p>
-            </div>
-        </a> -->
-
         <a href="video-poem.html">
             <section class="parallex-container vidpoem">
-                <!-- <div class="container-title">
-                    VIDEO POEM
-                </div> -->
             </section>
             <div class="index-subtext">
                 <p class="index-text one">
-                    Video Poem
+                    Take a St. And Video Poem
                 </p>
                 <p class="index-text two">
                     Filmmaking and animation
@@ -120,12 +137,7 @@
         </a>
 
     </div> <!--PROJECTS DIV-->
-
-    <!-- <div class="end-card">
-        <img class="end-card-img" src="img/end-banner.png" alt="End card with logotype and email">
-    </div> -->
-    
-
+   
 </main>
 <footer>
     <p class="footer-text">Portfolio designed and coded by Rebecca Wong</p>
