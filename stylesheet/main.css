@@ -422,6 +422,11 @@ background: #ba556d;
     background-position: center;
 }
 
+.syph{
+    background-image: url(../img/main-syph.png);
+    background-position: center;
+}
+
 .micro-landing{
     background-image: url(../img/main-graphic-design.png);
     background-position: center;
@@ -465,7 +470,7 @@ background: #ba556d;
 }
 
 /* MEDIA QUERIES INDEX  */
-@media (max-width: 1000px){
+/* @media (max-width: 1000px){
     .parallex-container:hover, .parallex-container:focus{
         background-size: cover;
     }
@@ -495,7 +500,6 @@ background: #ba556d;
         position: relative;
         padding-bottom: 5%;
         right: -25vw;
-        /* background-color: #84ae87; */
     }
 
     .index-title{
@@ -508,7 +512,7 @@ background: #ba556d;
     .projects{
         margin: 0;
     }
-}
+} */
 
 /* END INDEX STYLES */
 
@@ -1336,6 +1340,11 @@ content{
     width: 1040px;
     /* 704 differnce */
     /* height is 911 figma,  1615px here*/
+    height: auto;
+}
+
+.smaller-img{
+    width: 550px;
     height: auto;
 }
 
