@@ -352,10 +352,13 @@ background: #ba556d;
 }
 
 .parallex-container{
-    min-height: 72vh;
-    max-height: 72vh;
+    /* min-height: 72vh;
+    max-height: 72vh; */
+    /* height: 72vh; */
+    height: 400px;
     
     /* background-attachment: fixed; */
+    background-color: #bafd7f;
     background-size: 100%;
     background-repeat: no-repeat;
 
@@ -516,7 +519,6 @@ background: #ba556d;
 
 /* END INDEX STYLES */
 
-
 /* ABOUT STYLES */
 
 content{
@@ -640,6 +642,11 @@ content{
 
 /* MEDIA QUERIES ABOUT */
 @media (max-width: 900px){
+    .about-flex{
+        margin-top: 15%;
+        margin-left: 0;
+    }
+
     .about-flex1{
         margin-right: 1vw;
         width: 50%;
@@ -649,11 +656,11 @@ content{
         margin-right: 0;
     }
 
-    #menu-toggle{
+    /* #menu-toggle{
         background-color: rgba(255, 246, 246, 40%);
         padding: 5%;
         margin-left: -5vw;
-    }
+    } */
 }
 
 @media (max-width: 600px){
@@ -667,9 +674,16 @@ content{
     }
 
     .about-flex1, .about-flex2{
-        margin-top: 20%;
         margin-left: 2rem;
         width: 90%;
+    }
+
+    .about-flex1{
+        margin-top: 20%;
+    }
+
+    .about-flex2{
+        margin-top: 7%;
     }
 }
 
@@ -680,6 +694,10 @@ content{
 
     .about-flex1{
         margin-top: 30%;
+    }
+
+    .about-flex2{
+        margin-top: 10%;
     }
 }
 
@@ -1305,13 +1323,18 @@ content{
 }
 
 .youtube-vid{
-    width: 100%;
+    /* width: 100%; */
     justify-content: center;
     align-items: center;
     text-align: center;
 
     overflow: hidden;
     border-radius: 15px;
+}
+
+iframe{
+    width: 850px;
+    height: 500px;
 }
 
 /* END OF VIDEO POEM POETRY TAKE A ST. AND */
@@ -1395,3 +1418,126 @@ content{
 }
 
 /* END OF FOOTER */
+
+/* MEDIA QUERIES INDEX PAGE */
+
+@media screen and (max-width:930px) {
+
+    .parallex-container{
+        height: 300px;
+        background-size: 110%;
+        /* width: 115%; */
+    }
+
+    .parallex-container:hover, .parallex-container:focus{
+        background-size: 125%;
+    }
+
+    .projects{
+        margin: 3rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .parallex-container{
+        height: 250px;
+        /* background-size: 140%; */
+        background-size: 550px;
+    }
+
+    .parallex-container:hover, .parallex-container:focus{
+        /* background-size: 130%; */
+        background-size: 580px;
+    }
+
+    .projects{
+        margin: 1rem;
+    }
+
+    .banquet{
+        margin-top: 20%;
+    }
+}
+
+/* END OF MEDIA QUERIES INDEX PAGE */
+
+
+/* MEDIA QUERIES PROJECT PAGES */
+@media screen and (max-width:1030px) {
+    .single-img{
+        width: 600px;
+        height: auto;
+    }
+
+    img, video{
+        border-radius: 15px;
+    }
+
+    .video-embed{
+        width: 600px;
+        height: auto;
+    }
+
+    iframe{
+        width: 650px;
+        height: 300px;
+    }    
+}
+
+@media screen and (max-width:650px) {
+    .index-rest{
+        font-size: 30px;
+    }
+
+    .single-img, .smaller-img{
+        width: 400px;
+        height: auto;
+    }
+
+    .video-embed{
+        width: 400px;
+        height: auto;
+    }
+
+    iframe{
+        width: 650px;
+        /* height: 400px; */
+        height: 250px;
+    }
+
+    .quick-text{
+        /* padding-left: 3%; */
+        padding-left: 0;
+        /* padding-right: 3%; */
+        padding-right: 0;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .index-rest{
+        font-size: 20px;
+    }
+
+    .single-img, .smaller-img{
+        width: 250px;
+        height: auto;
+    }
+
+    .video-embed{
+        width: 300px;
+        height: auto;
+    }
+
+    iframe{
+        width: 450px;
+        /* height: 400px; */
+        height: 250px;
+    }
+}
+
+
+/* END OF MEDIA QUERIES PROJECT PAGES */
