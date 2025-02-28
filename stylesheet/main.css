@@ -352,10 +352,8 @@ background: #ba556d;
 }
 
 .parallex-container{
-    /* min-height: 72vh;
-    max-height: 72vh; */
-    /* height: 72vh; */
-    height: 400px;
+    /* height: 400px; */
+    height: 30vw;
     
     /* background-attachment: fixed; */
     background-color: #bafd7f;
@@ -412,6 +410,11 @@ background: #ba556d;
 
 .banquet{
     background-image: url(../img/main-banquet.png);
+    background-position: center;
+}
+
+.marketingmaterials{
+    background-image: url(../img/main-marketingmaterials.png);
     background-position: center;
 }
 
