@@ -342,6 +342,11 @@ background: #ba556d;
 /* https://blog.logrocket.com/create-parallax-scrolling-css/#implement-parallax-effect-css */
 /* https://codepen.io/robatronbobby/pen/KKRrKNz?editors=1100 */
 
+.landing-title{
+    text-align: center;
+    font-size: 4rem;
+}
+
 .projects{
     /* margin: 2.5rem; */
     margin: 6rem;
