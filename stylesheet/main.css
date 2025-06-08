@@ -329,7 +329,7 @@ background: #ba556d;
 }
 
 .landing-grid{
-    margin-top: 7rem;
+    /* margin-top: 2rem; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
@@ -388,7 +388,8 @@ p.landing-exp-points{
 }
 
 .projects{
-    margin: 6rem;
+    /* margin: 6rem; */
+    margin: 8rem;
 }
 
 .projects a{
