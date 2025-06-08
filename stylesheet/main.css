@@ -497,7 +497,7 @@ content{
 
 .about-grid{
     display: grid;
-    margin-left: 5rem;
+    margin-left: 2rem;
     margin-top: 5rem;
     grid-template-columns: 1.5fr 1.25fr;
     justify-content: center;
@@ -520,16 +520,13 @@ p.abt-landing-first-line{
 }
 
 .about-flex1{
-    /* margin-right: 8%; */
     color: #6e6e6e;
 }
 
 .about-flex2{
-    /* margin-right: 30%; */
 }
 
 .about-body{
-    /* margin-right: 5rem; */
     margin-bottom: 1rem;
     margin-top: 2rem;
 }
@@ -631,7 +628,7 @@ p.abt-landing-first-line{
     margin-top: 2rem;
     margin-bottom: 5rem;
     text-align: left;
-    margin-left: 11.25rem;
+    margin-left: 8.25rem;
 }
 
 .exp-title{
