@@ -2,6 +2,7 @@
     --mainpink: #d76983;
     --darksecondary: #796066;
     --lightpurple: #8a8aba;
+    --darkpurple: #836ca8;
     --off-white: #FFF6F6;
 }
 
@@ -482,42 +483,60 @@ p.landing-exp-points{
 
 /* ABOUT STYLES */
 
+.about-bg{
+    background-image: url(../img/about-bg.jpg);
+    background-position: center;
+    background-attachment: fixed;
+}
+
 content{
     margin-top: 5%;
     margin-left: 10%;
 }
 
-.about-flex{
-    display: flex;
-    margin-top: 3%;
-    margin-left: 15%;
-    flex: 1fr 1fr;
+.about-grid{
+    display: grid;
+    margin-left: 5rem;
+    margin-top: 5rem;
+    grid-template-columns: 1.5fr 1.25fr;
     justify-content: center;
+    gap: 10rem;
+}
+
+img.abt-purple-squiggle{
+    border-radius: 0;
+    width: auto;
+    height: 0.75rem;
+}
+p.abt-landing-first-line{
+    font-size: 2rem;
+    margin: 0;
+}
+.abt-landing-second-line{
+    margin: 0;
+    font-size: 4rem;
+    color: var(--mainpink);
 }
 
 .about-flex1{
-    margin-right: 8%;
+    /* margin-right: 8%; */
     color: #6e6e6e;
 }
 
 .about-flex2{
-    margin-right: 30%;
+    /* margin-right: 30%; */
 }
 
 .about-body{
-    margin-right: 5%;
-    margin-top: -2%;
-}
-
-.about-titles{
-    font-family: 'rubik-bold', sans-serif;
+    /* margin-right: 5rem; */
+    margin-bottom: 1rem;
+    margin-top: 2rem;
 }
 
 .about-title{
-    color: var(--lightpurple);
-    font-size: 3rem;
-    margin-bottom: 5%;
-    margin-top: 0;
+    color: var(--darksecondary);
+    font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
 .about-titles-socials{
@@ -536,7 +555,7 @@ content{
 
     display: inline-block;
     position: relative;
-    margin-bottom: 3%;
+    margin-bottom: 0.25rem;
     margin-top: 0;
 }
 
@@ -562,43 +581,80 @@ content{
     color: var(--darksecondary);
 }
 
+.resume-btn{
+    background-image: url(../img/landing-ellipse-purple.png);
+    background-size: 9rem;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+}
+
 /* https://stackoverflow.com/questions/17042201/how-to-style-input-and-submit-button-with-css */
 .resume-button{
-    font-size: 1em;
-    font-family: 'Rubik-Med';
-    background: var(--mainpink);
-    color: var(--off-white);
-    outline-color: var(--mainpink);
-    outline-style: solid;
-    padding: 1em;
-    /* border-radius: 2em; */
-    border-radius: 15px;
+    font-family: 'nohemi-med';
+    font-size: 1.5rem;
+    background: none;
+    color: var(--off-white);    
+
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 1rem;
     border: none;
-    transition: background 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .resume-button:hover{
-    background-color: var(--off-white);
     color: var(--mainpink);
     cursor: pointer;
-    border: var(--mainpink);
 }
 
-.social-media-icons{
+.about-imgs{
+    margin-top: 5rem;
+}
+.about-img-flex{
     display: flex;
-    margin-bottom: 3vh;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+.about-half{
+    width: 13.5rem;
+    height: auto;
+}
+.about-full{
+    width: 28rem;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
-.socials-icon{
-    width: 2.5em;
-    margin-right: 1em;
-    transition: filter 0.3s ease;
-    filter: grayscale(0%);
-    border-radius: 0;
+.about-footer{
+    font-size: 0.8rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    text-align: left;
+    margin-left: 11.25rem;
 }
 
-#instagram-icon:hover, #instagram-icon:focus, #tiktok-icon:hover, #tiktok-icon:focus, #linkedin-icon:hover, #linkedin-icon:focus{
-    filter: grayscale(70%);
+.exp-title{
+    margin-top: 5rem;
+    /* font-size: 2rem; */
+}
+
+.about-resume-exp{
+    margin-bottom: 3rem;
+}
+
+h5.about-job-title{
+    margin: 0;
+    /* font-weight: 400; */
+}
+h6.about-job-details{
+    margin: 0;
+    margin-top: 0.5rem;
+    font-family: 'rubik-reg';
+    font-weight: 100;
+    color: #AA8F95;
+}
+.about-job-points{
+    color: var(--darksecondary);
 }
 
 /* MEDIA QUERIES ABOUT */
@@ -682,7 +738,6 @@ content{
 
 .page-content{
     margin-top: 3%;
-    /* new */
     margin-left: 100px;
     margin-right: 100px;
 }
