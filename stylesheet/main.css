@@ -1000,9 +1000,10 @@ iframe{
 
 .footer-text{
     font-size: 0.8rem;
-    margin-top: 10%;
-    margin-bottom: 3%;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
     text-align: center;
+    /* padding-left: 3rem; */
 }
 
 /* END OF FOOTER */
