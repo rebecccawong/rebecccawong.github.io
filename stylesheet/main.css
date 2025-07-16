@@ -56,11 +56,6 @@
     src: url(../fonts/Rubik/Rubik-Bold.ttf);
 }
 
-@font-face {
-    /* font-family: 'roboto-regular';
-    src: url(../fonts/Roboto/Roboto-Regular.ttf); */
-}
-
 body{
     margin: 0;
     background-color: var(--off-white);
@@ -329,12 +324,11 @@ background: #ba556d;
 }
 
 .landing-grid{
-    /* margin-top: 2rem; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
     padding-bottom: 5rem;
-    align-items: center;
+    /* align-items: center; */
 }
 .landing-flex{
     display: flex;
@@ -349,16 +343,17 @@ img.purple-squiggle{
 
 .landing-experience{
     background-image: url(../img/landing-ellipse-purple.png);
-    background-size: 30rem;
+    background-size: 35vw;
     background-repeat: no-repeat;
 }
 p.landing-first-line{
-    font-size: 2.5rem;
+    font-size: 3vw;
     margin: 0;
 }
 .landing-second-line{
     margin: 0;
-    font-size: 6rem;
+    font-size: 5.5rem;
+    font-weight: 500;
     color: var(--mainpink);
 }
 .landing-last-line{
@@ -388,7 +383,6 @@ p.landing-exp-points{
 }
 
 .projects{
-    /* margin: 6rem; */
     margin: 8rem;
 }
 
@@ -399,7 +393,6 @@ p.landing-exp-points{
 .parallex-container{
     height: 30vw;
     
-    /* background-attachment: fixed; */
     background-color: #bafd7f;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -414,7 +407,6 @@ p.landing-exp-points{
     background-size: 115%;
     transition: background-size 0.5s ease;
 
-    /* z-index: -1; */
     text-decoration: none;
     text-decoration-line: none;
 }
@@ -479,11 +471,9 @@ p.landing-exp-points{
 .para-a:hover, .para-a:focus{
     color: var(--mainpink);
 }
-
 /* END INDEX STYLES */
 
 /* ABOUT STYLES */
-
 .about-bg{
     background-image: url(../img/about-bg.jpg);
     background-position: center;
@@ -523,9 +513,6 @@ p.abt-landing-first-line{
     color: #6e6e6e;
 }
 
-.about-flex2{
-}
-
 .about-body{
     margin-bottom: 1rem;
     margin-top: 2rem;
@@ -533,6 +520,7 @@ p.abt-landing-first-line{
 
 .about-title{
     color: var(--darksecondary);
+    font-weight: 500;
     font-size: 2rem;
     margin-bottom: 2rem;
 }
@@ -584,6 +572,7 @@ p.abt-landing-first-line{
     background-size: 9rem;
     background-repeat: no-repeat;
     margin-top: 1rem;
+    margin-left: -1.5rem;
 }
 
 /* https://stackoverflow.com/questions/17042201/how-to-style-input-and-submit-button-with-css */
@@ -595,7 +584,7 @@ p.abt-landing-first-line{
 
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
-    margin-left: 1rem;
+    margin-left: 1.15rem;
     border: none;
     transition: color 0.3s ease;
 }
@@ -633,7 +622,6 @@ p.abt-landing-first-line{
 
 .exp-title{
     margin-top: 5rem;
-    /* font-size: 2rem; */
 }
 
 .about-resume-exp{
@@ -642,7 +630,6 @@ p.abt-landing-first-line{
 
 h5.about-job-title{
     margin: 0;
-    /* font-weight: 400; */
 }
 h6.about-job-details{
     margin: 0;
@@ -670,12 +657,6 @@ h6.about-job-details{
     .about-flex2{
         margin-right: 0;
     }
-
-    /* #menu-toggle{
-        background-color: rgba(255, 246, 246, 40%);
-        padding: 5%;
-        margin-left: -5vw;
-    } */
 }
 
 @media (max-width: 600px){
@@ -715,8 +696,6 @@ h6.about-job-details{
         margin-top: 10%;
     }
 }
-
-
 /* END ABOUT STYLES */
 
 /* GRAPHIC DESIGN STYLES */
@@ -741,7 +720,6 @@ h6.about-job-details{
 }
 
 /* DOUGLAS ROYALS */
-
 .banquet-top-img{
     background-image: url(../img/main-banquet.png);
 
@@ -915,7 +893,6 @@ h6.about-job-details{
 }
 
 /* MEDIA QUERIES DOUGLAS ROYALS */
-
 @media (max-width: 750px){
     .image-text-flex1{
         width: 100%;
@@ -947,11 +924,9 @@ h6.about-job-details{
         display: inline;
     }
 }
-
 /* END OF DOUGLAS ROYALS */
 
 /* VIDEO POEM POETRY TAKE A ST. AND */
-
 .vidpoem-top-img{
     background-image: url(../img/main-video-poem.png);
     background-size: cover;
@@ -964,7 +939,6 @@ h6.about-job-details{
 }
 
 .youtube-vid{
-    /* width: 100%; */
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -981,16 +955,18 @@ iframe{
 /* END OF VIDEO POEM POETRY TAKE A ST. AND */
 
 /* NEW NEW NEW NEW NEW NEW NEW */
-
 .desc-heading{
     margin: 0;
 }
 
 .quick-text{
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 3%;
-    padding-bottom: 3%;
+    /* padding-left: 2rem;
+    padding-right: 2rem; */
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-bottom: 1rem;
+    /* padding-top: 1rem; */
+    padding-top: 2rem;
 }
 
 .grid-container{
@@ -1002,8 +978,6 @@ iframe{
 
 .single-img{
     width: 1040px;
-    /* 704 differnce */
-    /* height is 911 figma,  1615px here*/
     height: auto;
 }
 
@@ -1018,8 +992,6 @@ iframe{
 }
 
 .tall-img{
-    /* +600 */
-    /* height: 2215px; */
     height: auto;
     width: 1040px;
 }
@@ -1050,25 +1022,45 @@ iframe{
 }
 
 /* FOOTER */
-
 .footer-text{
     font-size: 0.8rem;
     margin-top: 2rem;
     margin-bottom: 5rem;
     text-align: center;
-    /* padding-left: 3rem; */
 }
-
 /* END OF FOOTER */
 
 /* MEDIA QUERIES INDEX PAGE */
-
 @media screen and (max-width:930px) {
+
+    .landing-grid{
+        gap: 0rem;
+        grid-template-columns: 0.75fr 1fr;
+    }
+
+    img.purple-squiggle{
+        height: 0.5rem;
+    }
+    p.landing-first-line{
+        font-size: 2rem;
+    }
+    .landing-second-line{
+        font-size: 4rem;
+    }
+
+    .landing-intro{
+        /* background-color: #796066; */
+    }
+
+    .landing-experience{
+        /* background-size: 27rem; */
+        background-size: 100%;
+        /* background-color: #6e6e6e; */
+    }
 
     .parallex-container{
         height: 300px;
         background-size: 110%;
-        /* width: 115%; */
     }
 
     .parallex-container:hover, .parallex-container:focus{
@@ -1084,12 +1076,10 @@ iframe{
 
     .parallex-container{
         height: 250px;
-        /* background-size: 140%; */
         background-size: 550px;
     }
 
     .parallex-container:hover, .parallex-container:focus{
-        /* background-size: 130%; */
         background-size: 580px;
     }
 
@@ -1101,7 +1091,6 @@ iframe{
         margin-top: 20%;
     }
 }
-
 /* END OF MEDIA QUERIES INDEX PAGE */
 
 
@@ -1133,29 +1122,29 @@ iframe{
     }
 
     .single-img, .smaller-img{
-        width: 400px;
+        /* width: 400px; */
+        width: 100%;
         height: auto;
     }
 
     .video-embed{
-        width: 400px;
+        /* width: 400px; */
+        width: 100%;
         height: auto;
     }
 
     iframe{
         width: 650px;
-        /* height: 400px; */
         height: 250px;
     }
 
     .quick-text{
-        /* padding-left: 3%; */
         padding-left: 0;
-        /* padding-right: 3%; */
         padding-right: 0;
-        padding-top: 3%;
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 7%;
         padding-bottom: 3%;
-        margin: 0;
     }
 }
 
@@ -1176,10 +1165,15 @@ iframe{
 
     iframe{
         width: 450px;
-        /* height: 400px; */
         height: 250px;
     }
 }
 
+@media screen and (max-width:600px) {
+    .page-content{
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}
 
 /* END OF MEDIA QUERIES PROJECT PAGES */
