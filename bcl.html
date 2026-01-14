@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BCLIQUOR | Rebecca Wong</title>
+    <!-- https://www.w3schools.com/html/html_favicon.asp -->
+    <link rel="icon" type="image/x-icon" href="img/flower-pink.ico">
+
+    <link rel="stylesheet" href="stylesheet/main.css">
+</head>
+
+<body>
+<main>
+    <header>
+    </header>
+    <!-- https://codepen.io/erikterwan/pen/EVzeRP -->
+    <nav class="nav-bar">
+        <div id="menu-toggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <li><a href="bcl.html">BCLIQUOR</a></li>
+                <li><a href="syphilis.html">Syphilis Campaign</a></li>
+                <li><a href="athletics-banquet.html">Athletics Banquet</a></li>
+                <li><a href="pacwest-volleyball-championship.html">PACWEST Volleyball<br>Championships</a></li>
+                <li><a href="ics-workbook.html">ICS Workbook</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+
+        <div class="logo-box"><a href="index.html"><img class="RWlogo" src="img/flower-pink.png" alt="Logo of The letters 'RW"></a></div>
+    </nav>
+
+    <div class="page-content">
+
+        <div class="index-rest">
+            BCLIQUOR<br>TASTE Covers & Collateral
+        </div>
+
+        <div class="fullwidth-container">
+            <img class="fullw-img" src="img/bcl/bcl-covers.jpg">
+        </div>
+
+        <br>
+        <div class="quick-text">
+            <h5 class="desc-heading">About BCLIQUOR</h5>
+            <p class="desc-copy">
+                BCLIQUOR has nearly 200 stores in British Columbia, being one of its largest liquor retailers. The Liquor Distribution Board (LDB) has a team of marketing creatives, including a graphic design team who designs for store events and marketing campaigns.
+            </p>
+        </div>
+
+        <div class="quick-text-2">
+            <h5 class="desc-heading">Role</h5>
+            <p class="desc-copy">
+                Graphic designer
+            </p>
+        </div>
+
+        <hr>
+
+        <div class="quick-text-2">
+            <h5 class="desc-heading">TASTE Magazine Covers</h5>
+            <p class="desc-copy">
+                The seasonally published TASTE magazine by BCLIQUOR is produced in-house. Typically, 3-4 magazines are produced and published each year. Covers for each issue are conceptualized and mocked up for approval several seasons before the issue's publication.
+            </p>
+        </div>
+            
+        <div class="spr-covers">
+            <div class="gallery-slideshow">
+
+                <div class="spr-slide-img">
+                    <img class="slide-imgs" src="img/bcl/bcl-spr1.jpg">
+                </div>
+
+                <div class="spr-slide-img">
+                    <img class="slide-imgs" src="img/bcl/bcl-spr2.jpg">
+                </div>
+
+                <div class="spr-slide-img">
+                    <img class="slide-imgs" src="img/bcl/bcl-spr3.jpg">
+                </div>
+
+                <div class="spr-slide-img">
+                    <img class="slide-imgs" src="img/bcl/bcl-spr4.jpg">
+                </div>
+
+                <div class="spr-slide-img">
+                    <img class="slide-imgs" src="img/bcl/bcl-spr5.jpg">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+
+            <div class="gallery-text">
+                <div class="desc-heading">
+                    <h5>Role</h5>
+                </div>
+
+                <div class="gallery-desc">
+                    <p class="desc-copy">
+                        Cover concept production artist for the TASTE Winter 2025 and Spring 2026 covers.
+                    </p>
+                </div>
+
+                <div class="desc-heading">
+                    <h5>Brief</h5>
+                </div>
+
+                <div class="gallery-desc">
+                    <p class="desc-copy">
+                        The covers were to be reviewed by the Marketing management team. Relative to the previous TASTE covers, these should be push how alcoholic bottles can be showcased in an environment, and creatively represent the taglines, such as “Lighten Up” for Spring.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("spr-slide-img");
+            let dots = document.getElementsByClassName("demo");
+            let captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+        </script>
+
+        <hr>
+
+        <div class="quick-text">
+            <h5 class="desc-heading">In-Store Collateral</h5>
+            <p class="desc-copy">
+                In-store collateral is fully produced in-house by the design team. New collateral is designed every month and reflects current BCLIQUOR promotions and campaigns. The goal is to be eye-catching (especially in a sea of similarly shaped bottles) and direct consumers to consider how the products may fit into their lives.
+            </p>
+        </div>
+
+        <div class="fullwidth-container">
+            <img class="fullw-img" src="img/bcl/bcl-collateral.jpg">
+        </div>
+
+
+
+
+
+
+    </div> <!-- page content -->
+
+</main>
+
+<footer>
+    <p class="footer-text">Rebecca Wong | 2025</p>
+</footer>
+</body>
+</html>

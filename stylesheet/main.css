@@ -4,6 +4,8 @@
     --lightpurple: #8a8aba;
     --darkpurple: #836ca8;
     --off-white: #FFF6F6;
+
+    --border-num: 15px;
 }
 
 @font-face {
@@ -56,6 +58,11 @@
     src: url(../fonts/Rubik/Rubik-Bold.ttf);
 }
 
+@font-face {
+    font-family: 'rubik-light';
+    src: url(../fonts/Rubik/Rubik-Light.ttf);
+}
+
 body{
     margin: 0;
     background-color: var(--off-white);
@@ -65,7 +72,7 @@ body{
 }
 
 img, video{
-    border-radius: 15px;
+    /* border-radius: var(--border-num); */
 }
 
 h1{
@@ -111,6 +118,18 @@ p{
     color: #6e6e6e;
     font-size: 17px;
     line-height: 1.5;
+}
+
+hr{
+    display: block;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    width: 50%;
+    /* border-color: var(--darksecondary); */
 }
 
 /* SCROLLBAR */
@@ -234,8 +253,7 @@ background: #ba556d;
 }
 
 /* 
- * Transform all the slices of hamburger
- * into a crossmark.
+ * Transform all the slices of hamburger into a crossmark.
  */
  #menu-toggle input:checked ~ span {
    opacity: 1;
@@ -259,27 +277,25 @@ background: #ba556d;
  }
 
  #menu{
-  position: absolute;
-  width: 3em;
-  /* margin: -1em 0 0 -0.5em; */
-  /* margin: -100px 0 0 -225px; */
+    position: absolute;
+    width: 3em;
     margin: -100px 0 0 -245px;
 
-  padding: 0.5em;
-  padding-top: 1.25em;
-  border-radius: 0 0 0 15px;
-  
-  background: var(--lightpurple);
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
-  transform-origin: 0% 0%;
-  /* transform: translate(100%, 0); */
-  transform: translate(0%, -100%);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-  /* transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0); */
+    padding: 0.5em;
+    padding-top: 1.25em;
+    border-radius: 0 0 0 var(--border-num);
+
+    background: var(--lightpurple);
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    /* transform: translate(100%, 0); */
+    transform: translate(0%, -100%);
+
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    /* transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0); */
 
 }
 
@@ -328,7 +344,6 @@ background: #ba556d;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
     padding-bottom: 5rem;
-    /* align-items: center; */
 }
 .landing-flex{
     display: flex;
@@ -347,8 +362,11 @@ img.purple-squiggle{
     background-repeat: no-repeat;
 }
 p.landing-first-line{
-    font-size: 3vw;
-    margin: 0;
+    /* font-size: 3vw; */
+    font-size: 1.5vw;
+    /* PADDING SHORTHAND: TOP RIGHT BOTTOM LEFT */
+    margin: 0 0 5% 0;
+    padding: 0;
 }
 .landing-second-line{
     margin: 0;
@@ -391,7 +409,7 @@ p.landing-exp-points{
 }
 
 .parallex-container{
-    height: 30vw;
+    height: 70vh;
     
     background-color: #bafd7f;
     background-size: 100%;
@@ -399,7 +417,7 @@ p.landing-exp-points{
 
     padding: 0;
     margin-bottom: 5em;
-    border-radius: 15px;
+    border-radius: var(--border-num);
     transition: background-size 0.5s ease;
 }
 
@@ -430,27 +448,32 @@ p.landing-exp-points{
 }
 
 .banquet{
-    background-image: url(../img/main-banquet.png);
+    background-image: url(../img/main-banquet.jpg);
     background-position: center;
 }
 
 .pacwest{
-    background-image: url(../img/main-pacwest.png);
+    background-image: url(../img/main-pacwest.jpg);
     background-position: center;
 }
 
 .icsworkbook{
-    background-image: url(../img/main-ics.png);
+    background-image: url(../img/main-ics.jpg);
     background-position: center;
 }
 
 .syph{
-    background-image: url(../img/main-syph.png);
+    background-image: url(../img/main-syph.jpg);
     background-position: center;
 }
 
 .vidpoem{
     background-image: url(../img/main-video-poem.png);
+    background-position: center;
+}
+
+.bcl{
+    background-image: url(../img/main-bcl.jpg);
     background-position: center;
 }
 
@@ -474,11 +497,6 @@ p.landing-exp-points{
 /* END INDEX STYLES */
 
 /* ABOUT STYLES */
-.about-bg{
-    background-image: url(../img/about-bg.jpg);
-    background-position: center;
-    background-attachment: fixed;
-}
 
 content{
     margin-top: 5%;
@@ -491,7 +509,8 @@ content{
     margin-top: 5rem;
     grid-template-columns: 1.5fr 1.25fr;
     justify-content: center;
-    gap: 10rem;
+    /* gap: 10rem; */
+    gap: 8%;
 }
 
 img.abt-purple-squiggle{
@@ -568,29 +587,27 @@ p.abt-landing-first-line{
 }
 
 .resume-btn{
-    background-image: url(../img/landing-ellipse-purple.png);
+    /* background-image: url(../img/landing-ellipse-purple.png); */
     background-size: 9rem;
     background-repeat: no-repeat;
     margin-top: 1rem;
-    margin-left: -1.5rem;
+    /* margin-left: -1.5rem; */
 }
 
 /* https://stackoverflow.com/questions/17042201/how-to-style-input-and-submit-button-with-css */
-.resume-button{
-    font-family: 'nohemi-med';
-    font-size: 1.5rem;
-    background: none;
-    color: var(--off-white);    
-
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    margin-left: 1.15rem;
-    border: none;
-    transition: color 0.3s ease;
+.standard-button{
+    font-family: 'rubik-med';
+    font-size: 20px;
+    background: var(--lightpurple);
+    color: var(--off-white);
+    padding: 3% 4% 3% 4%;
+    border-radius: var(--border-num);
+    border-style: none;
+    transition: background-color 0.3s ease;
 }
 
-.resume-button:hover{
-    color: var(--mainpink);
+.standard-button:hover{
+    background-color: var(--mainpink);
     cursor: pointer;
 }
 
@@ -625,10 +642,12 @@ p.abt-landing-first-line{
 }
 
 .about-resume-exp{
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
-h5.about-job-title{
+p.about-job-title{
+    font-family: 'rubik-med';
+    color: #a2858b;
     margin: 0;
 }
 h6.about-job-details{
@@ -644,14 +663,19 @@ h6.about-job-details{
 
 /* MEDIA QUERIES ABOUT */
 @media (max-width: 900px){
+    .about-grid{
+        display: block;
+        margin-left: 0;
+        justify-content: left;
+        background-color: #e5e5e5;
+    }
     .about-flex{
         margin-top: 15%;
         margin-left: 0;
     }
 
     .about-flex1{
-        margin-right: 1vw;
-        width: 50%;
+        width: 80%;
     }
 
     .about-flex2{
@@ -705,18 +729,22 @@ h6.about-job-details{
 }
 
 .index-rest{
-    margin-top: 2em;
-    margin-bottom: 1em;
+    /* margin-top: 2em;
+    margin-bottom: 1em; */
+    /* SHORTHAND: TOP RIGHT BOTTOM LEFT */
+    margin: 5% 0 0 0;
     text-align: center;
-    color: #796066;
+    color: var(--darksecondary);
     font-family: 'nohemi-med';
-    font-size: 45px;
+    /* font-size: 45px; */
+    font-size: 35px;
 }
 
 .page-content{
     margin-top: 3%;
     margin-left: 100px;
     margin-right: 100px;
+    margin-bottom: 0;
 }
 
 /* DOUGLAS ROYALS */
@@ -944,29 +972,41 @@ h6.about-job-details{
     text-align: center;
 
     overflow: hidden;
-    border-radius: 15px;
+
+    margin-top: 10%;
+    padding: 0;
 }
 
-iframe{
-    width: 850px;
-    height: 500px;
+.video-embed{
+    width: 800px;
+    height: auto;
+    margin: 5% 0 0 0;
+    padding: 0;
 }
 
 /* END OF VIDEO POEM POETRY TAKE A ST. AND */
 
 /* NEW NEW NEW NEW NEW NEW NEW */
-.desc-heading{
+.quick-text{
+    /* PADDING SHORTHAND: TOP RIGHT BOTTOM LEFT */
     margin: 0;
+    padding: 5% 17% 0 17%;
 }
 
-.quick-text{
-    /* padding-left: 2rem;
-    padding-right: 2rem; */
-    padding-left: 8rem;
-    padding-right: 8rem;
-    padding-bottom: 1rem;
-    /* padding-top: 1rem; */
-    padding-top: 2rem;
+.quick-text-2{
+    /* PADDING SHORTHAND: TOP RIGHT BOTTOM LEFT */
+    margin: 0;
+    padding: 2% 17% 0 17%;
+}
+
+.desc-heading{
+    margin: 0;
+    padding: 0;
+}
+
+.desc-copy{
+    padding: 0;
+    margin: 1% 0 0 0;
 }
 
 .grid-container{
@@ -976,9 +1016,64 @@ iframe{
     justify-content: center;
 }
 
+.fullwidth-container{
+    text-align: center;
+    /* background-color: #00ff37; */
+    margin: 0 -100px 0 -100px;
+    margin-top: 5%;
+}
+
+.fullwidth-container-2{
+    text-align: center;
+    margin: 5% 0 0 0;
+    padding: 0 17% 0 17%;
+}
+
+.project-hero{
+    text-align: center;
+    margin: 0 -100px 0 -100px;
+    padding-top: 5%;
+}
+
+.tri-desc{
+    display: flex;
+    gap: 1.5%;
+    /* MARGIN SHORTHAND TOP RIGHT BOTTOM LEFT */
+    margin: 3% 7% 3% 7%;
+}
+
+.tri-group{
+    border-radius: var(--border-num);
+    background: #eae6e6;
+    padding: 2% 3% 2% 3%;
+    width: 30%;
+}
+
+.tri-text-title, .tri-text-desc{
+    text-align: center;
+}
+
+.tri-text-title{
+    font-family: 'rubik-med';
+    color: var(--mainpink);
+    font-size: 110%;
+}
+
+.tri-text-desc{
+    font-size: 95%;
+}
+
 .single-img{
     width: 1040px;
     height: auto;
+}
+
+.fullw-img{
+    height: auto;
+    width: 100%;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .smaller-img{
@@ -994,11 +1089,6 @@ iframe{
 .tall-img{
     height: auto;
     width: 1040px;
-}
-
-.video-embed{
-    width: 850px;
-    height: auto;
 }
 
 .grid-item{
@@ -1021,6 +1111,85 @@ iframe{
     height: auto;
 }
 
+.syph-phone{
+    background-color: #F1E2E6;
+}
+
+/* BCL BCLIQUOR BC LIQUOR */
+
+.spr-covers{
+    display: flex;
+    gap: 3%;
+    margin: 5% -100px 0 -100px;
+    /* background-color: #796066; */
+}
+
+.gallery-slideshow{
+    position: relative;
+    /* background-color: #9c4257; */
+    width: 70%;
+}
+
+.gallery-text{
+    text-align: left;
+    align-items: baseline;
+    /* background-color: #bafd7f; */
+}
+
+.gallery-desc{
+    width: 73%;
+}
+
+.spr-slide-img{
+    display: none;
+    padding: 0;
+    margin: 0;
+}
+
+.slide-imgs{
+    width: auto;
+    height: 33vw;
+    border-radius: 0;
+}
+
+/* arrows */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  color: var(--mainpink);
+  font-size: 30px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.prev:hover , .next:hover{
+    color: var(--lightpurple);
+}
+
+.prev:active , .next:active{
+    color: var(--darkpurple);
+}
+
+.next {
+    margin-left: 54vw;
+    margin-top: 12.5vw;
+    border-radius: 3px 0 0 3px;
+    transition: 0.3s ease;
+}
+
+.prev{
+    margin-left: 51vw;
+    margin-top: 12.5vw;
+    border-radius: 3px 0 0 3px;
+    transition: 0.3s ease;
+}
+
+/* END OF BCL BCLIQUOR */
+
 /* FOOTER */
 .footer-text{
     font-size: 0.8rem;
@@ -1033,16 +1202,24 @@ iframe{
 /* MEDIA QUERIES INDEX PAGE */
 @media screen and (max-width:930px) {
 
-    .landing-grid{
+    /* .landing-grid{
         gap: 0rem;
         grid-template-columns: 0.75fr 1fr;
+    } */
+
+    .landing-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        padding-bottom: 5rem;
+        /* align-items: center; */
     }
 
     img.purple-squiggle{
         height: 0.5rem;
     }
     p.landing-first-line{
-        font-size: 2rem;
+        /* font-size: 2rem; */
     }
     .landing-second-line{
         font-size: 4rem;
@@ -1102,7 +1279,7 @@ iframe{
     }
 
     img, video{
-        border-radius: 15px;
+        border-radius: var(--border-num);
     }
 
     .video-embed{
