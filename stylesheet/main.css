@@ -84,20 +84,16 @@ h1{
 
 h2{
     font-family: 'rubik-bold';
-    font-size: 3em;
-    color: white;
+    font-size: 3rem;
+    color: var(--darkpurple);
+    padding: 0;
+    margin: 0;
 }
 
 h3{
-    font-family: 'rubik-med';
-    font-size: 1.5em;
-    color: var(--darksecondary);
 }
 
 h4{
-    font-family: 'rubik-med';
-    font-size: 1em;
-    color: var(--darksecondary);
 }
 
 h5{
@@ -129,7 +125,6 @@ hr{
     border-style: inset;
     border-width: 1px;
     width: 50%;
-    /* border-color: var(--darksecondary); */
 }
 
 /* SCROLLBAR */
@@ -137,22 +132,18 @@ hr{
     width: 10px;
 }
   
-/* Entire track */
 ::-webkit-scrollbar-track {
 background: none; 
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
 background: var(--mainpink); 
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
 background: #ba556d; 
 }
 
-/* Handle on active */
 ::-webkit-scrollbar-thumb:active {
     background: #9c4257; 
 }
@@ -160,7 +151,6 @@ background: #ba556d;
 ::selection{
     background-color: #ddbbc3;
 }
-
 
 /* HAMBURGER MENU */
 #menu-toggle{
@@ -252,26 +242,19 @@ background: #ba556d;
     transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger into a crossmark.
- */
+/* Transform all the slices of hamburger into a crossmark */
  #menu-toggle input:checked ~ span {
    opacity: 1;
    transform: rotate(45deg) translate(-2px, -1px);
    background: white;
- }
- 
- /*
-  * But let's hide the middle one.
-  */
+ } 
+ /* But let's hide the middle one */
  #menu-toggle input:checked ~ span:nth-last-child(3) {
    opacity: 0;
    transform: rotate(0deg) scale(0.2, 0.2);
  }
  
- /*
-  * Oh yeah and the last one should go the other direction
-  */
+ /* Oh yeah and the last one should go the other direction */
  #menu-toggle input:checked ~ span:nth-last-child(2) {
    transform: rotate(-45deg) translate(0, -1px);
  }
@@ -288,15 +271,12 @@ background: #ba556d;
     background: var(--lightpurple);
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
+    /* to stop text flickering in safari */
 
     transform-origin: 0% 0%;
-    /* transform: translate(100%, 0); */
     transform: translate(0%, -100%);
 
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-    /* transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0); */
-
 }
 
 #menu li{
@@ -304,25 +284,12 @@ background: #ba556d;
   font-size: 1.30rem;
 }
 
-/*
- * And let's slide it in from the left
- */
+/* And let's slide it in from the right */
 #menu-toggle input:checked ~ ul{
   transform: none;
 }
 
-/* INDEX STYLES */
-
-#index-title{
-    color: var(--mainpink);
-    font-family: 'nohemi';
-    text-decoration: underline;
-    font-style: normal;
-}
-
-#index-title:hover, #index-rest:focus{
-    cursor: pointer;
-}
+/* LOGO AND MENU (TOP STICKY ELEMENTS) */
 
 .RWlogo{
     width: 2.5rem;
@@ -339,66 +306,16 @@ background: #ba556d;
     display: flex;
 }
 
-.landing-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-    padding-bottom: 5rem;
-}
-.landing-flex{
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-img.purple-squiggle{
-    border-radius: 0;
-    width: auto;
-    height: 1rem;
-}
-
-.landing-experience{
-    background-image: url(../img/landing-ellipse-purple.png);
-    background-size: 35vw;
-    background-repeat: no-repeat;
-}
+/* INDEX STYLES */
 p.landing-first-line{
-    /* font-size: 3vw; */
     font-size: 1.5vw;
     /* PADDING SHORTHAND: TOP RIGHT BOTTOM LEFT */
     margin: 0 0 5% 0;
     padding: 0;
 }
-.landing-second-line{
-    margin: 0;
-    font-size: 5.5rem;
-    font-weight: 500;
-    color: var(--mainpink);
-}
-.landing-last-line{
-    margin-top: 1rem;
-    font-size: 1rem;
-}
-h3.landing-exp{
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-p.landing-exp-points{
-    margin-top: 1rem;
-}
-.landing-exp, .landing-exp-points{
-    color: var(--off-white);
-    margin-left: 7rem;
-    margin-top: 3rem;
-    padding-bottom: 4rem;
-}
 
 /* https://blog.logrocket.com/create-parallax-scrolling-css/#implement-parallax-effect-css */
 /* https://codepen.io/robatronbobby/pen/KKRrKNz?editors=1100 */
-
-.landing-title{
-    text-align: center;
-    font-size: 3rem;
-}
 
 .projects{
     margin: 8rem;
@@ -422,11 +339,8 @@ p.landing-exp-points{
 }
 
 .parallex-container:hover, .parallex-container:focus{
-    background-size: 115%;
+    background-size: 107%;
     transition: background-size 0.5s ease;
-
-    text-decoration: none;
-    text-decoration-line: none;
 }
 
 .index-subtext{
@@ -457,18 +371,8 @@ p.landing-exp-points{
     background-position: center;
 }
 
-.icsworkbook{
-    background-image: url(../img/main-ics.jpg);
-    background-position: center;
-}
-
 .syph{
     background-image: url(../img/main-syph.jpg);
-    background-position: center;
-}
-
-.vidpoem{
-    background-image: url(../img/main-video-poem.png);
     background-position: center;
 }
 
@@ -477,31 +381,13 @@ p.landing-exp-points{
     background-position: center;
 }
 
-.para-a{
-    display: inline-block;
-    margin-top: 27rem;
-    margin-left: 0.25em;
-
-    border-radius: 0.3em;
-    background-color: none;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    transition: color 0.3s ease;
-}
-
-.para-a:hover, .para-a:focus{
-    color: var(--mainpink);
+.icsworkbook{
+    background-image: url(../img/main-ics.jpg);
+    background-position: center;
 }
 /* END INDEX STYLES */
 
 /* ABOUT STYLES */
-
-content{
-    margin-top: 5%;
-    margin-left: 10%;
-}
 
 .about-grid{
     display: grid;
@@ -509,23 +395,7 @@ content{
     margin-top: 5rem;
     grid-template-columns: 1.5fr 1.25fr;
     justify-content: center;
-    /* gap: 10rem; */
     gap: 8%;
-}
-
-img.abt-purple-squiggle{
-    border-radius: 0;
-    width: auto;
-    height: 0.75rem;
-}
-p.abt-landing-first-line{
-    font-size: 2rem;
-    margin: 0;
-}
-.abt-landing-second-line{
-    margin: 0;
-    font-size: 4rem;
-    color: var(--mainpink);
 }
 
 .about-flex1{
@@ -544,18 +414,9 @@ p.abt-landing-first-line{
     margin-bottom: 2rem;
 }
 
-.about-titles-socials{
-    font-family: 'rubik-bold', sans-serif;
-    margin-top: 3vh;
-}
-
-.email-link{
-    text-decoration: none;
-}
-
 /* https://www.30secondsofcode.org/css/s/hover-underline-animation/ */
 .about-items{
-    font-family: 'Rubik-Med';
+    font-family: 'rubik-med';
     color: var(--mainpink);
 
     display: inline-block;
@@ -586,28 +447,21 @@ p.abt-landing-first-line{
     color: var(--darksecondary);
 }
 
-.resume-btn{
-    /* background-image: url(../img/landing-ellipse-purple.png); */
-    background-size: 9rem;
-    background-repeat: no-repeat;
-    margin-top: 1rem;
-    /* margin-left: -1.5rem; */
-}
-
 /* https://stackoverflow.com/questions/17042201/how-to-style-input-and-submit-button-with-css */
 .standard-button{
     font-family: 'rubik-med';
     font-size: 20px;
-    background: var(--lightpurple);
+    background: var(--mainpink);
     color: var(--off-white);
     padding: 3% 4% 3% 4%;
+    margin-top: 2%;
     border-radius: var(--border-num);
     border-style: none;
     transition: background-color 0.3s ease;
 }
 
 .standard-button:hover{
-    background-color: var(--mainpink);
+    background-color: var(--darksecondary);
     cursor: pointer;
 }
 
@@ -629,20 +483,14 @@ p.abt-landing-first-line{
     margin-bottom: 1rem;
 }
 
-.about-footer{
-    font-size: 0.8rem;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
-    text-align: left;
-    margin-left: 8.25rem;
-}
-
 .exp-title{
     margin-top: 5rem;
 }
 
 .about-resume-exp{
     margin-bottom: 1.5rem;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 p.about-job-title{
@@ -656,9 +504,6 @@ h6.about-job-details{
     font-family: 'rubik-reg';
     font-weight: 100;
     color: #AA8F95;
-}
-.about-job-points{
-    color: var(--darksecondary);
 }
 
 /* MEDIA QUERIES ABOUT */
@@ -722,203 +567,22 @@ h6.about-job-details{
 }
 /* END ABOUT STYLES */
 
-/* GRAPHIC DESIGN STYLES */
+/* ATHLETICS BANQUET */
 
-#index-rest{
-    width: 40%;
+.youtube-vid{
+    margin-top: 7%;
 }
 
-.index-rest{
-    /* margin-top: 2em;
-    margin-bottom: 1em; */
-    /* SHORTHAND: TOP RIGHT BOTTOM LEFT */
-    margin: 5% 0 0 0;
-    text-align: center;
-    color: var(--darksecondary);
-    font-family: 'nohemi-med';
-    /* font-size: 45px; */
-    font-size: 35px;
-}
-
-.page-content{
-    margin-top: 3%;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 0;
-}
-
-/* DOUGLAS ROYALS */
-.banquet-top-img{
-    background-image: url(../img/main-banquet.png);
-
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: -1;
-    padding-top: 25vw;
-    text-align: left;
-    color: var(--off-white);
-    font-family: 'rubik-med', sans-serif;
-}
-
-.pacwest-top-img{
-    background-image: url(../img/main-pacwest.png);
-
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: -1;
-    padding-top: 25vw;
-    text-align: left;
-    color: var(--off-white);
-    font-family: 'rubik-med', sans-serif;
-}
-
-.cta-button{
-    justify-content: center;
-}
-
-.simple-flex{
+.watch-flex{
     display: flex;
     justify-content: center;
-}
-
-.flex-img{
-    display: flex;
-    justify-content: center;
-}
-
-.flex-imgs{
-    width: 35%;
-    height: 35%;
-    margin: 1%;
-}
-
-.quick-flex{
-    display: flex;
 }
 
 .button-flex{
     margin-right: 1vw;
 }
 
-.doug-top-img{
-    background-image: url(../img/main-doug.png);
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: -1;
-    padding-top: 25vw;
-    text-align: left;
-    color: var(--off-white);
-    font-family: 'rubik-med', sans-serif;
-}
-
-.doug-modules{
-    display: flex;
-    flex: 2;
-}
-
-.mod-pics{
-    height: 30%;
-}
-
-.tab{
-    background: transparent;
-    grid-template-rows: 1fr 1fr;
-}
-
-.tabs{
-    margin-bottom: 5%;
-    display: flex;
-    background: transparent;
-    height: 20%;
-    width: 80%;
-}
-
-.label-douglas-headings{
-    padding: 1em;
-
-    position: -webkit-sticky;
-    position: sticky;
-    top: 3%;
-    /* https://www.w3docs.com/tools/code-editor/9895 */
-}
-
-.mini-headers-tab{
-    font-family: 'nohemi-med', sans-serif;
-    font-size: 20pt;
-    margin-left: 2%;
-    margin-top: 5%;
-    margin-bottom: 3%;
-    color: var(--darksecondary);
-    justify-content: left;
-    text-align: left;
-}
-
-.doug-overview-text{
-    text-align: left;
-    justify-content: center;
-    align-items: center;
-    margin-left: 5em;
-}
-
 /* PACWEST VOLLEYBALL CHAMPIONSHIPS */
-.left-flex-img{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-.left-progress-img{    
-    width: 90%;
-}
-
-.image-text-flex{
-    display: flex;
-    justify-content: center;
-}
-
-.image-text-flex1{
-    width: 40rem;
-    margin-right: 3rem;
-    text-align: center;
-}
-
-.image-text-flex2{
-    width: 20rem;
-}
-
-.reflection-text{
-    padding-left: 12vw;
-    padding-right: 12vw;
-}
-
-.left-img-flex{
-    display: flex;
-    flex-direction: row;
-}
-
-.vball-new-line{
-    margin-top: 2vh;
-}
-
-.left-image-caption{
-    font-size: 0.75rem;
-    text-align: center;
-}
-
-.vball-champ-pg-flex{
-    text-align: left;
-}
-
-.be-smaller{
-    width: 50%;
-}
-
-.be-smallest{
-    width: 30%;
-}
-
-.be-smallish{
-    width: 65%;
-}
 
 /* MEDIA QUERIES DOUGLAS ROYALS */
 @media (max-width: 750px){
@@ -954,47 +618,31 @@ h6.about-job-details{
 }
 /* END OF DOUGLAS ROYALS */
 
-/* VIDEO POEM POETRY TAKE A ST. AND */
-.vidpoem-top-img{
-    background-image: url(../img/main-video-poem.png);
-    background-size: cover;
-    background-attachment: fixed;
-    z-index: -1;
-    padding-top: 25vw;
-    text-align: left;
-    color: var(--off-white);
-    font-family: 'rubik-med', sans-serif;
-}
+/* ALL PROJECT PAGE STYLING */
 
-.youtube-vid{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    overflow: hidden;
-
-    margin-top: 10%;
-    padding: 0;
-}
-
-.video-embed{
-    width: 800px;
-    height: auto;
+.project-title{
+    /* SHORTHAND: TOP RIGHT BOTTOM LEFT */
     margin: 5% 0 0 0;
-    padding: 0;
+    text-align: center;
+    color: var(--darksecondary);
+    font-family: 'nohemi-med';
+    font-size: 35px;
 }
 
-/* END OF VIDEO POEM POETRY TAKE A ST. AND */
+.page-content{
+    margin-top: 3%;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 0;
+}
 
-/* NEW NEW NEW NEW NEW NEW NEW */
-.quick-text{
+.desc-text{
     /* PADDING SHORTHAND: TOP RIGHT BOTTOM LEFT */
     margin: 0;
     padding: 5% 17% 0 17%;
 }
 
-.quick-text-2{
-    /* PADDING SHORTHAND: TOP RIGHT BOTTOM LEFT */
+.desc-text-2{
     margin: 0;
     padding: 2% 17% 0 17%;
 }
@@ -1016,17 +664,9 @@ h6.about-job-details{
     justify-content: center;
 }
 
-.fullwidth-container{
-    text-align: center;
-    /* background-color: #00ff37; */
-    margin: 0 -100px 0 -100px;
-    margin-top: 5%;
-}
-
-.fullwidth-container-2{
-    text-align: center;
-    margin: 5% 0 0 0;
-    padding: 0 17% 0 17%;
+.video-embed{
+    width: 800px;
+    height: auto;
 }
 
 .project-hero{
@@ -1035,40 +675,19 @@ h6.about-job-details{
     padding-top: 5%;
 }
 
-.tri-desc{
-    display: flex;
-    gap: 1.5%;
-    /* MARGIN SHORTHAND TOP RIGHT BOTTOM LEFT */
-    margin: 3% 7% 3% 7%;
-}
-
-.tri-group{
-    border-radius: var(--border-num);
-    background: #eae6e6;
-    padding: 2% 3% 2% 3%;
-    width: 30%;
-}
-
-.tri-text-title, .tri-text-desc{
+.full-media{
     text-align: center;
+    margin: 0 -100px 0 -100px;
+    margin-top: 5%;
 }
 
-.tri-text-title{
-    font-family: 'rubik-med';
-    color: var(--mainpink);
-    font-size: 110%;
+.half-media{
+    text-align: center;
+    margin: 5% 0 0 0;
+    padding: 0 17% 0 17%;
 }
 
-.tri-text-desc{
-    font-size: 95%;
-}
-
-.single-img{
-    width: 1040px;
-    height: auto;
-}
-
-.fullw-img{
+.proj-img{
     height: auto;
     width: 100%;
     border-radius: 0;
@@ -1076,40 +695,7 @@ h6.about-job-details{
     margin: 0;
 }
 
-.smaller-img{
-    width: 550px;
-    height: auto;
-}
-
-.skinny-img{
-    width: 300px;
-    height: auto;
-}
-
-.tall-img{
-    height: auto;
-    width: 1040px;
-}
-
-.grid-item{
-    align-content: center;
-}
-
-.grid-item-inside{
-    display: grid;
-    grid-template-rows: auto auto;
-    gap: 10px;
-}
-
-.img-ab-1, .img-ab-4, .img-ab-5{
-    width: 690px;
-    height: auto;
-}
-
-.img-ab-3, .img-ab-6, .img-ab-2{
-    width: 340px;
-    height: auto;
-}
+/* SYPHILIS */
 
 .syph-phone{
     background-color: #F1E2E6;
@@ -1121,19 +707,16 @@ h6.about-job-details{
     display: flex;
     gap: 3%;
     margin: 5% -100px 0 -100px;
-    /* background-color: #796066; */
 }
 
 .gallery-slideshow{
     position: relative;
-    /* background-color: #9c4257; */
     width: 70%;
 }
 
 .gallery-text{
     text-align: left;
     align-items: baseline;
-    /* background-color: #bafd7f; */
 }
 
 .gallery-desc{
@@ -1290,7 +873,7 @@ h6.about-job-details{
     iframe{
         width: 650px;
         height: 300px;
-    }    
+    } 
 }
 
 @media screen and (max-width:650px) {
