@@ -127,6 +127,17 @@ hr{
     width: 50%;
 }
 
+hr.footer{
+    display: block;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    width: 80%;
+}
+
 /* SCROLLBAR */
 ::-webkit-scrollbar {
     width: 10px;
@@ -319,6 +330,10 @@ p.landing-first-line{
 
 .projects{
     margin: 8rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* background-color: #6e6e6e; */
 }
 
 .projects a{
@@ -338,7 +353,26 @@ p.landing-first-line{
     transition: background-size 0.5s ease;
 }
 
+.parallex-container-half{
+    height: 62vh;
+    width: 38vw;
+    
+    background-color: #bafd7f;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    padding: 0;
+    margin-bottom: 5em;
+    border-radius: var(--border-num);
+    transition: background-size 0.5s ease;
+}
+
 .parallex-container:hover, .parallex-container:focus{
+    background-size: 107%;
+    transition: background-size 0.5s ease;
+}
+
+.parallex-container-half:hover, .parallex-container-half:focus{
     background-size: 107%;
     transition: background-size 0.5s ease;
 }
@@ -346,6 +380,17 @@ p.landing-first-line{
 .index-subtext{
     font-size: 105%;
     line-height: 140%;
+}
+
+.index-flex{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+.index-flex-proj{
+    padding: 0;
+    margin: 0;
 }
 
 .one{
@@ -366,13 +411,28 @@ p.landing-first-line{
     background-position: center;
 }
 
+.banquet-half{
+    background-image: url(../img/main-banquet-sq.jpg);
+    background-position: center;
+}
+
 .pacwest{
     background-image: url(../img/main-pacwest.jpg);
     background-position: center;
 }
 
+.pacwest-half{
+    background-image: url(../img/main-pacwest-sq.jpg);
+    background-position: center;
+}
+
 .syph{
     background-image: url(../img/main-syph.jpg);
+    background-position: center;
+}
+
+.syph-half{
+    background-image: url(../img/main-syph-sq.jpg);
     background-position: center;
 }
 
@@ -383,6 +443,11 @@ p.landing-first-line{
 
 .icsworkbook{
     background-image: url(../img/main-ics.jpg);
+    background-position: center;
+}
+
+.icsworkbook-half{
+    background-image: url(../img/main-ics-sq.jpg);
     background-position: center;
 }
 /* END INDEX STYLES */
@@ -405,6 +470,7 @@ p.landing-first-line{
 .about-body{
     margin-bottom: 1rem;
     margin-top: 2rem;
+    line-height: 120%;
 }
 
 .about-title{
@@ -414,17 +480,41 @@ p.landing-first-line{
     margin-bottom: 2rem;
 }
 
-/* https://www.30secondsofcode.org/css/s/hover-underline-animation/ */
-.about-items{
-    font-family: 'rubik-med';
-    color: var(--mainpink);
-
-    display: inline-block;
-    position: relative;
-    margin-bottom: 0.25rem;
-    margin-top: 0;
+.about-socials{
+    display: flex;
+    gap: 10px;
+    height: 30px;
+    width: auto;
+    /* SHORTHAND: TOP RIGHT BOTTOM LEFT */
+    margin: 3% 0 3% 0;
+    padding: 0;
 }
 
+.social-icon{
+    padding: 0;
+    
+    width: auto;
+    height: 25px;
+    transition: background-color 0.25s ease;
+    background-color: var(--mainpink);
+}
+
+.social-icon:hover {
+    transition: background-color 0.25s ease;
+    background-color: var(--darksecondary);
+}
+
+/* https://www.30secondsofcode.org/css/s/hover-underline-animation/ */
+  /* .about-items{
+   font-family: 'rubik-med';
+    color: var(--mainpink); */
+
+    /* display: inline-block;
+    position: relative; */
+    /* margin-bottom: 5%;
+    margin-top: 0; 
+}*/
+/*
 .about-items::after{
     content: '';
     position: absolute;
@@ -441,10 +531,59 @@ p.landing-first-line{
 .about-items:hover::after{
     transform: scaleX(1);
     transform-origin: bottom left;
+} */
+
+/* .about-items:hover, .about-items:focus{
+    color: var(--darksecondary);
+} */
+
+.mailto-link {
+	position: relative;
+    font-family: 'rubik-med';
+    color: var(--mainpink);
+    transition: color 0.25s ease-out;
+}
+.mailto-link:hover, .mailto-link:focus{
+    color: var(--darksecondary);
+    transition: color 0.25s ease-out;
 }
 
-.about-items:hover, .about-items:focus{
-    color: var(--darksecondary);
+/* box that shows up */
+.mailto-message {
+	top: 1px;
+	left: 50%;
+	transform: translate(-50%, -100%);
+	position: absolute;
+	display: none;
+	width: auto;
+	white-space: nowrap;
+	font-size: 12px;
+	background-color: var(--darkpurple);
+	color: var(--off-white);
+    padding: 5px 8px;
+	border-radius: 3px;
+	&:after,
+	&:before {
+		content: '';
+	}
+	&:before {
+		top: 100%;
+		left: 50%;
+		border: solid transparent;
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		/* border-color: rgba(0, 0, 0, 0); */
+		border-top-color: #000000;
+		border-width: 4px;
+		margin-left: -4px;
+	}
+}
+.mailto-link:hover .mailto-message,
+.mailto-link:focus .mailto-message,
+.mailto-link:focus-within .mailto-message {
+	display: block;
 }
 
 /* https://stackoverflow.com/questions/17042201/how-to-style-input-and-submit-button-with-css */
