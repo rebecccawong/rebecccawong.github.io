@@ -9,66 +9,74 @@
 }
 
 @font-face {
-    font-family: 'nohemi';
-    src: url(../fonts/Nohemi/Nohemi-Bold.ttf);
+    font-family: 'denton-light';
+    src: url(../fonts/Denton/DentonTextXCondTest-Light.otf);
 }
 
 @font-face {
-    font-family: 'nohemi-med';
-    src: url(../fonts/Nohemi/Nohemi-Medium.ttf);
+    font-family: 'denton-black';
+    src: url(../fonts/Denton/DentonTextXCondTest-Black.otf);
 }
 
 @font-face {
-    font-family: 'nohemi-semi-bold';
-    src: url(../fonts/Nohemi/Nohemi-SemiBold.ttf);
+    font-family: 'denton-bold';
+    src: url(../fonts/Denton/DentonTextXCondTest-Bold.otf);
 }
 
 @font-face {
-    font-family: 'nohemi-light';
-    src: url(../fonts/Nohemi/Nohemi-Light.ttf);
+    font-family: 'denton-med';
+    src: url(../fonts/Denton/DentonTextXCondTest-Medium.otf);
 }
 
 @font-face {
-    font-family: 'nohemi-black';
-    src: url(../fonts/Nohemi/Nohemi-Black.ttf);
+    font-family: 'denton-thin';
+    src: url(../fonts/Denton/DentonTextXCondTest-Thin.otf);
 }
 
 @font-face {
-    font-family: 'nohemi-extra-light';
-    src: url(../fonts/Nohemi/Nohemi-ExtraLight.ttf);
+    font-family: 'denton-reg';
+    src: url(../fonts/Denton/DentonTextXCondTest-Regular.otf);
 }
 
 @font-face {
-    font-family: 'nohemi-reg';
-    src: url(../fonts/Nohemi/Nohemi-Regular.ttf);
+    font-family: 'montreal-book';
+    src: url(../fonts/Montreal/PPNeueMontrealText-Book.otf);
 }
 
 @font-face {
-    font-family: 'rubik-med';
-    src: url(../fonts/Rubik/Rubik-Medium.ttf);
+    font-family: 'montreal-semibold';
+    src: url(../fonts/Montreal/PPNeueMontreal-Semibold.otf);
 }
 
 @font-face {
-    font-family: 'rubik-reg';
-    src: url(../fonts/Rubik/Rubik-Regular.ttf);
+    font-family: 'montreal-reg';
+    src: url(../fonts/Montreal/PPNeueMontreal-Regular.otf);
 }
 
 @font-face {
-    font-family: 'rubik-bold';
-    src: url(../fonts/Rubik/Rubik-Bold.ttf);
+    font-family: 'montreal-light';
+    src: url(../fonts/Montreal/PPNeueMontreal-Light.otf);
 }
 
 @font-face {
-    font-family: 'rubik-light';
-    src: url(../fonts/Rubik/Rubik-Light.ttf);
+    font-family: 'montreal-hairline';
+    src: url(../fonts/Montreal/PPNeueMontreal-hairline.otf);
+}
+
+@font-face {
+    font-family: 'montreal-extrabold';
+    src: url(../fonts/Montreal/PPNeueMontreal-Extrabold.otf);
 }
 
 body{
-    margin: 0;
+    /* margin: 0; */
+    /* PADDING SHORTHAND: TOP RIGHT BOTTOM LEFT */
+    /* line-height: 5; */
+    /* come back to this */
     background-color: var(--off-white);
     color: black;
     text-decoration: none;
-    font-family: 'rubik-reg', 'sans-serif';
+    font-family: 'montreal-book', 'sans-serif';
 }
 
 img, video{
@@ -77,17 +85,19 @@ img, video{
 
 h1{
     margin-top: 1vw;
-    font-family: 'nohemi';
+    font-family: 'denton-light';
     font-size: 6em;
     color: var(--mainpink);
 }
 
 h2{
-    font-family: 'rubik-bold';
-    font-size: 3rem;
+    font-family: 'denton-light';
+    font-size: 5rem;
     color: var(--darkpurple);
     padding: 0;
     margin: 0;
+    font-weight: 100;
+    letter-spacing: -0.02em;
 }
 
 h3{
@@ -97,14 +107,15 @@ h4{
 }
 
 h5{
-    font-family: 'nohemi-light';
-    font-size: 1.2em;
+    font-family: 'denton-light';
+    font-size: 1.5em;
+    font-weight: 300;
     color: var(--darksecondary);
     margin-bottom: 0;
 }
 
 h6{
-    font-family: 'nohemi-med';
+    font-family: 'denton-med';
     font-size: 1em;
     color: var(--darksecondary);
 }
@@ -318,10 +329,22 @@ background: #ba556d;
 }
 
 /* INDEX STYLES */
+
+h1.index-name{
+    /* font-family: 'denton-light'; */
+    color: var(--darkpurple);
+    font-weight: 100;
+    text-align: center;
+    margin: 10% 0 0 0;
+    padding: 0;
+    font-size: 10vw;
+}
+
 p.landing-first-line{
+    text-align: center;
     font-size: 1.5vw;
     /* PADDING SHORTHAND: TOP RIGHT BOTTOM LEFT */
-    margin: 0 0 5% 0;
+    /* margin: 0 0 5% 0; */
     padding: 0;
 }
 
@@ -329,7 +352,8 @@ p.landing-first-line{
 /* https://codepen.io/robatronbobby/pen/KKRrKNz?editors=1100 */
 
 .projects{
-    margin: 8rem;
+    /* SHORTHAND: TOP RIGHT BOTTOM LEFT */
+    margin: 5% 10% 0 10%;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -382,6 +406,28 @@ p.landing-first-line{
     line-height: 140%;
 }
 
+.index-tags{
+    display: flex;
+    /* display: grid;
+    grid-template-columns: auto auto auto; */
+    margin: 0;
+    padding: 0;
+}
+
+.index-tag{
+    /* SHORTHAND: TOP RIGHT BOTTOM LEFT */
+    /* margin: 0.5% 0.75% 0 0; */
+    margin: 0.5% 7px 0 0;
+    /* padding: 0.25% 1.25% 0.25% 1.25%; */
+    padding: 3px 12px 3px 12px;
+    border-radius: 999px;
+    outline-color: var(--darkpurple);
+    color: var(--darkpurple);
+    outline-style: solid;
+    outline-width: 1.25px;
+    font-size: 14px;
+}
+
 .index-flex{
     display: flex;
     justify-content: space-between;
@@ -395,10 +441,11 @@ p.landing-first-line{
 
 .one{
     color: var(--mainpink);
-    font-family: "nohemi-reg";
+    font-family: "denton-reg";
     margin-top: -4rem;
     margin-bottom: 0;
-    font-size: 120%;
+    /* font-size: 120%; */
+    font-size: 28px;
 }
 
 .two{
@@ -467,16 +514,22 @@ p.landing-first-line{
     color: #6e6e6e;
 }
 
+.about-hi{
+    font-family: 'nohemi-reg';
+}
+
 .about-body{
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-    line-height: 120%;
+    /* margin-bottom: 1rem;
+    margin-top: 2rem; */
+    /* line-height: 120%; */
+    line-height: 1.35;
 }
 
 .about-title{
     color: var(--darksecondary);
-    font-weight: 500;
-    font-size: 2rem;
+    font-family: 'denton-light';
+    font-weight: 150;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
 }
 
@@ -539,7 +592,7 @@ p.landing-first-line{
 
 .mailto-link {
 	position: relative;
-    font-family: 'rubik-med';
+    font-family: 'montreal-semibold';
     color: var(--mainpink);
     transition: color 0.25s ease-out;
 }
@@ -588,8 +641,8 @@ p.landing-first-line{
 
 /* https://stackoverflow.com/questions/17042201/how-to-style-input-and-submit-button-with-css */
 .standard-button{
-    font-family: 'rubik-med';
-    font-size: 20px;
+    font-family: 'montreal-semibold';
+    font-size: 18px;
     background: var(--mainpink);
     color: var(--off-white);
     padding: 3% 4% 3% 4%;
@@ -627,20 +680,22 @@ p.landing-first-line{
 }
 
 .about-resume-exp{
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     margin-top: 0;
     padding-top: 0;
 }
 
 p.about-job-title{
-    font-family: 'rubik-med';
+    font-family: 'denton-reg';
+    font-size: 23px;
     color: #a2858b;
     margin: 0;
 }
+
 h6.about-job-details{
     margin: 0;
-    margin-top: 0.5rem;
-    font-family: 'rubik-reg';
+    margin-top: 0.15rem;
+    font-family: 'montreal-book';
     font-weight: 100;
     color: #AA8F95;
 }
@@ -764,8 +819,8 @@ h6.about-job-details{
     margin: 5% 0 0 0;
     text-align: center;
     color: var(--darksecondary);
-    font-family: 'nohemi-med';
-    font-size: 35px;
+    font-family: 'denton-med';
+    font-size: 40px;
 }
 
 .page-content{
