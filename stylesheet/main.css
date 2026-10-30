@@ -3,7 +3,7 @@
     --darksecondary: #796066;
     --lightpurple: #8a8aba;
     --darkpurple: #836ca8;
-    --off-white: #FFF6F6;
+    --off-white: #efe9e7;
 
     --border-num: 15px;
 }
@@ -324,25 +324,93 @@ background: #ba556d;
     border-radius: 0;
 }
 
+.nav-bar, .nav-bar::before, .nav-bar::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .nav-bar{
     display: flex;
+    --text: var(--mainpink);
+    font-family: 'montreal-semibold';
+    /* align-items: center;
+    justify-content: center;
+    text-align: center; */
+    /* PADDING SHORTHAND: TOP RIGHT BOTTOM LEFT */
+    padding: 2% 0 0 0;
+    width: auto;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    /* background-color: #000000; */
 }
+
+.nav-hypers{
+    display: flex;
+    gap: 15%;
+}
+
+.nav-bar2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(138,138,186,15%);
+    border-radius: 999px;
+    /* padding: 0.35rem; */
+    padding: 0 7% 0 7%;
+    backdrop-filter: blur;
+    /* background-color: #000000; */
+}
+
+.nav-links{
+    display: flex;
+    gap: 30%;
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0;
+    /* background-color: #bafd7f; */
+}
+
+.nav-links a{
+    display: block;
+    color: var(--mainpink);
+    text-decoration: none;
+    font-size: 115%;
+    border-radius: 999px;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-flower{
+    width: auto;
+    height: 25px;
+    color: #9c4257;
+    padding: 0;
+    margin: 0;
+}
+
 
 /* INDEX STYLES */
 
 h1.index-name{
-    /* font-family: 'denton-light'; */
     color: var(--darkpurple);
     font-weight: 100;
     text-align: center;
-    margin: 10% 0 0 0;
+    margin: 2% 0 0 0;
     padding: 0;
-    font-size: 10vw;
+    /* font-size: 10vw; */
+    font-size: 710%;
 }
 
 p.landing-first-line{
     text-align: center;
-    font-size: 1.5vw;
+    /* font-size: 1.5vw; */
+    font-size: 125%;
     /* PADDING SHORTHAND: TOP RIGHT BOTTOM LEFT */
     /* margin: 0 0 5% 0; */
     padding: 0;
@@ -647,7 +715,8 @@ p.landing-first-line{
     color: var(--off-white);
     padding: 3% 4% 3% 4%;
     margin-top: 2%;
-    border-radius: var(--border-num);
+    /* border-radius: var(--border-num); */
+    border-radius: 999px;
     border-style: none;
     transition: background-color 0.3s ease;
 }
