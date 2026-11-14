@@ -571,34 +571,111 @@ p.landing-first-line{
 
 .about-grid{
     display: grid;
-    margin-left: 2rem;
-    margin-top: 5rem;
-    grid-template-columns: 1.5fr 1.25fr;
-    justify-content: center;
-    gap: 8%;
+    grid-template-columns: 0.45fr 0.45fr;
+    /* justify-content: center; */
+    gap: 0%;
+    margin-bottom: 10%;
+    /* background-color: #6e6e6e; */
 }
 
 .about-flex1{
-    color: #6e6e6e;
+    /* background-color: #cd5f5f; */
+    margin: 0;
+    padding: 0;
 }
 
-.about-hi{
-    font-family: 'nohemi-reg';
+.about-flex2{
+    margin: 0;
+    padding: 0;
+}
+
+.about-stars{
+    width: 20%;
+    padding-left: 65%;
+    object-fit: contain;
+    height: auto;
 }
 
 .about-body{
     /* margin-bottom: 1rem;
     margin-top: 2rem; */
     /* line-height: 120%; */
-    line-height: 1.35;
+    line-height: 1.30;
 }
 
-.about-title{
-    color: var(--darksecondary);
+.experience-box{
+    text-align: center;
+    background-color: var(--darkpurple);
+    padding: 1% 9% 5% 9%;
+    margin: auto;
+    border-radius: 100px;
+    width: 55%;
+}
+
+.each-exp{
+    display: flex;
+    gap: 3%;
+    margin: 3% 0 0 0;
+    padding: 3% 3% 0 3%;
+    border: 2px solid var(--darkpurple);
+    border-radius: 999px;
+    transition: border 0.25s ease;
+    /* align-items: center; */
+}
+
+.each-exp:hover{
+    border: 2px solid var(--lightpurple);
+    transition: border 0.25s ease;
+
+}
+
+.exp-logo{
+    border-radius: 999px;
+    /* width: 22%;
+    height: 22%; */
+    width: 100%;
+    /* background-color: #bafd7f; */
+}
+
+.logo-links{
+    padding: 0;
+    margin: 0;
+    /* width: 22%;
+    height: 22%; */
+    text-align: center;
+    width: 25%;
+    height: 50%;
+    text-decoration: none;
+    display: inline-block;
+    /* background-color: #9c4257; */
+    cursor: pointer;
+}
+
+.about-title{    
     font-family: 'denton-light';
     font-weight: 150;
     font-size: 2.5rem;
+}
+
+.exp-title{
+    color: var(--off-white);
     margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+
+.clock-title{
+    color: var(--darksecondary);
+    margin-top: 8rem;
+    margin-bottom: 1rem;
+}
+
+.fun{
+    width: 85%;
+}
+
+.about-contacts{
+    padding-top: 5%;
+    /* background-color: #6e6e6e; */
 }
 
 .about-socials{
@@ -607,7 +684,7 @@ p.landing-first-line{
     height: 30px;
     width: auto;
     /* SHORTHAND: TOP RIGHT BOTTOM LEFT */
-    margin: 3% 0 3% 0;
+    margin: 1% 0 3% 0;
     padding: 0;
 }
 
@@ -624,39 +701,6 @@ p.landing-first-line{
     transition: background-color 0.25s ease;
     background-color: var(--darksecondary);
 }
-
-/* https://www.30secondsofcode.org/css/s/hover-underline-animation/ */
-  /* .about-items{
-   font-family: 'rubik-med';
-    color: var(--mainpink); */
-
-    /* display: inline-block;
-    position: relative; */
-    /* margin-bottom: 5%;
-    margin-top: 0; 
-}*/
-/*
-.about-items::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--darksecondary);
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-
-.about-items:hover::after{
-    transform: scaleX(1);
-    transform-origin: bottom left;
-} */
-
-/* .about-items:hover, .about-items:focus{
-    color: var(--darksecondary);
-} */
 
 .mailto-link {
 	position: relative;
@@ -713,19 +757,23 @@ p.landing-first-line{
     font-size: 18px;
     background: var(--mainpink);
     color: var(--off-white);
-    padding: 3% 4% 3% 4%;
+    padding: 3% 5% 3% 5%;
     margin-top: 2%;
     /* border-radius: var(--border-num); */
     border-radius: 999px;
-    border-style: none;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--mainpink);
     transition: background-color 0.3s ease;
 }
 
 .standard-button:hover{
-    background-color: var(--darksecondary);
+    background-color: var(--off-white);
+    color: var(--mainpink);
+    
     cursor: pointer;
 }
-
+/* 
 .about-imgs{
     margin-top: 5rem;
 }
@@ -742,10 +790,14 @@ p.landing-first-line{
     width: 28rem;
     height: auto;
     margin-bottom: 1rem;
-}
+} */
 
-.exp-title{
-    margin-top: 5rem;
+.about-imgs{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+    margin-top: 3%;
 }
 
 .about-resume-exp{
@@ -757,16 +809,17 @@ p.landing-first-line{
 p.about-job-title{
     font-family: 'denton-reg';
     font-size: 23px;
-    color: #a2858b;
     margin: 0;
+    color: var(--off-white);
 }
 
 h6.about-job-details{
     margin: 0;
-    margin-top: 0.15rem;
+    margin-top: 0.1rem;
     font-family: 'montreal-book';
     font-weight: 100;
-    color: #AA8F95;
+    color: var(--off-white);
+    opacity: 70%;
 }
 
 /* MEDIA QUERIES ABOUT */
