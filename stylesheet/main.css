@@ -155,33 +155,54 @@ hr.footer{
 }
   
 ::-webkit-scrollbar-track {
-background: none; 
+background: none;
 }
 
 ::-webkit-scrollbar-thumb {
-background: var(--mainpink); 
+background: var(--darksecondary); 
+border-radius: 100px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-background: #ba556d; 
+background: #644e53; 
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background: #9c4257; 
+    background: #4b353a; 
 }
 
 ::selection{
-    background-color: #ddbbc3;
+    /* background-color: #ddbbc3; */
+    background-color: var(--lightpurple);
 }
 
-/* HAMBURGER MENU */
+.nav-bar, .nav-bar::before, .nav-bar::after{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+.nav-bar{
+    display: flex;
+    /* font-family: 'montreal-semibold'; */
+    font-family: 'denton-reg';
+    /* PADDING SHORTHAND: TOP RIGHT BOTTOM LEFT */
+    padding: 2% 0 0 0;
+    position: sticky;
+    z-index: 100;
+}
+
+.nav-link{
+    margin-left: 18px;
+}
+
 #menu-toggle{
-    font-weight: bold;
-    font-size: 5em;
-    display: block;
+    /* font-weight: bold; */
+    font-size: 1.5em;
     position: fixed;
-    top: 0.5em;
-    right: 0.5em;
+    display: flex;
+    top: 2em;
+    right: 2em;
 
     z-index: 1;
 
@@ -191,7 +212,7 @@ background: #ba556d;
 
 #menu-toggle a{
     text-decoration: none;
-    color: white;
+    color: var(--darksecondary);
     transition: color 0.3s ease;
 
     display: inline-block;
@@ -199,7 +220,7 @@ background: #ba556d;
 }
 
 #menu-toggle a:hover{
-    color: rgb(252, 212, 212);
+    color: var(--darksecondary);
 }
 
 #menu-toggle a::after{
@@ -210,7 +231,7 @@ background: #ba556d;
     height: 2px;
     bottom: 0;
     right: 0;
-    background-color: rgb(252, 212, 212);
+    background-color: var(--darksecondary);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -236,172 +257,31 @@ background: #ba556d;
     -webkit-touch-callout: none;
 }
 
-#menu-toggle span{
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-
-    background: var(--mainpink);
-    border-radius: 3px;
-
-    z-index: 1;
-
-    transform-origin: 4px 0px;
-
-    transition: 
-                transform 0.3s cubic-bezier(0.5,0.2,0.0,1.0),
-                background 0.3s cubic-bezier(0.77,0.2,1.0,0.05),
-                opacity 0.5s ease;
-}
-
-#menu-toggle span:first-child{
-    transform-origin: 0% 0%;
-}
-
-#menu-toggle span:nth-last-child(2){
-    transform-origin: 0% 100%;
-}
-
-/* Transform all the slices of hamburger into a crossmark */
- #menu-toggle input:checked ~ span {
-   opacity: 1;
-   transform: rotate(45deg) translate(-2px, -1px);
-   background: white;
- } 
- /* But let's hide the middle one */
- #menu-toggle input:checked ~ span:nth-last-child(3) {
-   opacity: 0;
-   transform: rotate(0deg) scale(0.2, 0.2);
- }
- 
- /* Oh yeah and the last one should go the other direction */
- #menu-toggle input:checked ~ span:nth-last-child(2) {
-   transform: rotate(-45deg) translate(0, -1px);
- }
-
- #menu{
-    position: absolute;
-    width: 3em;
-    margin: -100px 0 0 -245px;
-
-    padding: 0.5em;
-    padding-top: 1.25em;
-    border-radius: 0 0 0 var(--border-num);
-
-    background: var(--lightpurple);
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    /* to stop text flickering in safari */
-
-    transform-origin: 0% 0%;
-    transform: translate(0%, -100%);
-
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li{
-  padding: 0.5em 0;
-  font-size: 1.30rem;
-}
-
-/* And let's slide it in from the right */
-#menu-toggle input:checked ~ ul{
-  transform: none;
-}
-
 /* LOGO AND MENU (TOP STICKY ELEMENTS) */
 
 .RWlogo{
-    width: 2.5rem;
-    display: block;
+    width: 2.25rem;
+    /* display: block; */
     position: fixed;
     top: 2em;
     left: 2em;
 
     z-index: 1;
     border-radius: 0;
+    transition: transform 0.5s ease;
 }
 
-.nav-bar, .nav-bar::before, .nav-bar::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.RWlogo:hover{
+    transform: rotate(90deg);
 }
-
-.nav-bar{
-    display: flex;
-    --text: var(--mainpink);
-    font-family: 'montreal-semibold';
-    /* align-items: center;
-    justify-content: center;
-    text-align: center; */
-    /* PADDING SHORTHAND: TOP RIGHT BOTTOM LEFT */
-    padding: 2% 0 0 0;
-    width: auto;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    /* background-color: #000000; */
-}
-
-.nav-hypers{
-    display: flex;
-    gap: 15%;
-}
-
-.nav-bar2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: rgba(138,138,186,15%);
-    border-radius: 999px;
-    /* padding: 0.35rem; */
-    padding: 0 7% 0 7%;
-    backdrop-filter: blur;
-    /* background-color: #000000; */
-}
-
-.nav-links{
-    display: flex;
-    gap: 30%;
-    list-style: none;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding: 0;
-    /* background-color: #bafd7f; */
-}
-
-.nav-links a{
-    display: block;
-    color: var(--mainpink);
-    text-decoration: none;
-    font-size: 115%;
-    border-radius: 999px;
-    white-space: nowrap;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-flower{
-    width: auto;
-    height: 25px;
-    color: #9c4257;
-    padding: 0;
-    margin: 0;
-}
-
 
 /* INDEX STYLES */
 
 h1.index-name{
-    color: var(--darkpurple);
+    color: var(--mainpink);
     font-weight: 100;
     text-align: center;
-    margin: 2% 0 0 0;
+    margin: 2% 0 -2% 0;
     padding: 0;
     /* font-size: 10vw; */
     font-size: 710%;
@@ -489,8 +369,8 @@ p.landing-first-line{
     /* padding: 0.25% 1.25% 0.25% 1.25%; */
     padding: 3px 12px 3px 12px;
     border-radius: 999px;
-    outline-color: var(--darkpurple);
-    color: var(--darkpurple);
+    outline-color: var(--darksecondary);
+    color: var(--darksecondary);
     outline-style: solid;
     outline-width: 1.25px;
     font-size: 14px;
@@ -601,6 +481,7 @@ p.landing-first-line{
     margin-top: 2rem; */
     /* line-height: 120%; */
     line-height: 1.30;
+    color: var(--darksecondary);
 }
 
 .experience-box{
@@ -634,7 +515,6 @@ p.landing-first-line{
     /* width: 22%;
     height: 22%; */
     width: 100%;
-    /* background-color: #bafd7f; */
 }
 
 .logo-links{
@@ -659,7 +539,7 @@ p.landing-first-line{
 
 .exp-title{
     color: var(--off-white);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     margin-top: 3rem;
 }
 
@@ -707,6 +587,7 @@ p.landing-first-line{
     font-family: 'montreal-semibold';
     color: var(--mainpink);
     transition: color 0.25s ease-out;
+    text-decoration: none;
 }
 .mailto-link:hover, .mailto-link:focus{
     color: var(--darksecondary);
@@ -941,8 +822,8 @@ h6.about-job-details{
     margin: 5% 0 0 0;
     text-align: center;
     color: var(--darksecondary);
-    font-family: 'denton-med';
-    font-size: 40px;
+    font-family: 'denton-reg';
+    font-size: 45px;
 }
 
 .page-content{
@@ -1024,9 +905,10 @@ h6.about-job-details{
 
 .slides-desc{
     font-size: 15px;
-    margin-top: 30%;
-    margin: 0;
+    margin-top: 0.5%;
     padding: 0;
+    /* background-color: #c1acb1; */
+    text-align: center;
 }
 
 .gallery-slideshow{
@@ -1035,7 +917,7 @@ h6.about-job-details{
     align-items: center;
     text-align: center;
     margin-top: 5%;
-    /* background-color: #a09898; */
+    /* background-color: #98a098; */
 }
 
 .spr-slide-img{
@@ -1056,43 +938,46 @@ h6.about-job-details{
 }
 
 /* arrows */
+.slide-arrows{
+    text-align: center;
+    /* background-color: #bafd7f; */
+    align-items: center;
+    margin-top: 2%;
+}
+
 .prev, .next {
   cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
+  /* position: absolute; */
+  /* top: 40%; */
+  /* width: auto; */
+  margin-top: 50%;
+  padding: 10px 22px;
   color: var(--mainpink);
   font-size: 30px;
-  border-radius: 0 3px 3px 0;
+  border-radius: 100px;
+  border: 2px solid var(--mainpink);
   user-select: none;
   -webkit-user-select: none;
+
+  /* background-color: #c2b1dc; */
 }
 
 .prev:hover , .next:hover{
-    color: var(--lightpurple);
+    color: var(--off-white);
+    background-color: var(--mainpink);
 }
 
 .prev:active , .next:active{
-    color: var(--darkpurple);
+    color: var(--white);
+    background-color: var(--mainpink);
 }
 
 .next {
-    /* margin-left: 54vw;
-    margin-top: 12.5vw; */
-    margin-left: 0vw;
-    margin-top: 19.5vw;
-    border-radius: 3px 0 0 3px;
     transition: 0.3s ease;
 }
 
 .prev{
-    /* margin-left: 51vw;
-    margin-top: 12.5vw; */
-    margin-left: -4vw;
-    margin-top: 19.5vw;
-    border-radius: 3px 0 0 3px;
-    transition: 0.3s ease;
+    transition: 0.3s ease; 
 }
 
 /* END OF BCL BCLIQUOR */
